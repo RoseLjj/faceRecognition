@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>“父爱如山”点赞活动</title>
+    <meta name="description" content="双节同庆领双份万元旅行大奖，送父亲一场难忘的旅行！"/>
+    <meta name="keywords" content="你是我见过最美的一座山"/>
+
+    <link rel="stylesheet" href="css/common.css"/>
+
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script src="js/jquery.facedetection.js"></script>
+    <style>
+        #img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<input onchange="uploadImg(this)" type="file" name="" id="uploadImg" accept="image/*">
+<div class="demo-container"><img class="fa-img" id="img" src="../../img/active/dragonBoat/zp.jpg" imgUrl="" alt=""></div>
+
+</body>
+</html>
+<script>
+    /**
+     * 上传图片
+     * @param that
+     */
+    function uploadImg(that) {
+        var file = that.files[0];
+        var r = new FileReader();
+        r.readAsDataURL(file);
+        $(r).load(function () {
+            $('.demo-container').html('<img class="fa-img" id="img" src="'+ this.result+'" imgUrl="" alt="">');
+            $('#img').load(function () {
+//                trackerFace()
+                tryIt()
+            })
+        })
+    }
+
+
+    function tryIt() {
+        $('#img').faceDetection({
+            complete: function (faces) {
+                console.log(faces);
+                if(faces[0] == '' || faces[0] == null){
+                    console.log('错误');
+                }else{
+                    console.log('有了');
+                }
+                for (var i = 0; i < faces.length; i++) {
+                    $('<div>', {
+                        'class':'face',
+                        'css': {
+                            'position': 'absolute',
+                            'left':     faces[i].x * faces[i].scaleX + 'px',
+                            'top':      faces[i].y * faces[i].scaleY + 'px',
+                            'width':    faces[i].width  * faces[i].scaleX + 'px',
+                            'height':   faces[i].height * faces[i].scaleY + 'px'
+                        }
+                    })
+                        .insertAfter(this);
+                }
+            },
+            error:function (code, message) {
+                alert('Error: ' + message);
+            }
+        });
+    }
+</script>
