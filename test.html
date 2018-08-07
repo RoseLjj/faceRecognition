@@ -136,4 +136,32 @@
             }
         });
     }
+
+
+    function shibie() {
+        var fd;
+        fd = new FormData();
+        fd.append('image','../img/faces.jpeg')
+        $.ajax({
+            url: 'http://cloud.ai.360.cn:8000/rest/1.0/image/face-detection/detect',
+//            url: fd,
+            type: 'POST',
+//            datatype: {image:[""]} ,
+            data: fd,
+            headers: {
+                Accept: "application/json; charset=utf-8"
+            },
+//          headers : {"Authorization": "Basic QWxhZGRpbjpPcGVuU2VzYW1l"},
+            cache: false,
+            traditional: true,
+            contentType: false,
+            processData: false,
+            success: function (data) {
+
+            },
+            error: function () {
+            }
+        });
+    }
+
 </script>
