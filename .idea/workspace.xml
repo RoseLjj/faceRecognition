@@ -54,8 +54,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
-    <option name="width" value="1932" />
-    <option name="height" value="1056" />
+    <option name="width" value="1386" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -89,13 +89,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="configurable.group.appearance" />
-    <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -118,9 +118,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
