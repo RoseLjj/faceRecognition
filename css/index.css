@@ -169,12 +169,25 @@ html,body{
 /*############  上传图片 start #########*/
 .upload-img{
     position: relative;
+    display: none;
 }
 
 .upload-box{
     display: inline-block;
     margin-top: 7rem;
     position: relative;
+}
+
+.upload-box .up-pic{
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-left: -8.5rem;
+    margin-top: -7.7rem;
+    z-index: 5;
 }
 
 .upload-box input{
@@ -235,3 +248,146 @@ button.btn-zhan{
 }
 
 /*############  上传图片 end #########*/
+/*############  最后 start #########*/
+.last-content{
+    padding-top: 2rem;
+}
+
+.last-word{
+    position: relative;
+}
+
+.word-big-bg{
+    width: 28rem;
+}
+
+.user-img-bg{
+    width: 5rem;
+    height: 5rem;
+}
+
+.user-info{
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+}
+
+.user-img{
+    display: inline-block;
+    position: relative;
+}
+
+.user-info>ul{
+    display: inline-block;
+    padding-top: 1rem;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.user-name{
+    /*display: inline-block;*/
+    color:#fff;
+}
+
+.user-header-img{
+    width: 4.6rem;
+    height: 4.6rem;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -2.3rem;
+    margin-top: -2.3rem;
+    border-radius: 50%;
+}
+
+.my-word{
+    position: absolute;
+    top: 12rem;
+    left: 5rem;
+}
+
+.my-word-info{
+    width: 22rem;
+    height: 11.2rem;
+    background-image: url(../img/word_bg.png);
+    background-size: 100% 100%;
+}
+
+.my-word-info img.word-width-16{
+    width: 16rem;
+    margin-top: 3rem;
+}
+
+
+
+.my-word-info img.word-width-12{
+    width: 12rem;
+    margin-top: 2.5rem;
+}
+
+.my-word-info img.word-width-14{
+    width: 14rem;
+    margin-top: 2.5rem;
+}
+
+.my-word-info img.word-width-15{
+    width: 15rem;
+    margin-top: 2.5rem;
+}
+
+.my-word-info img.word-width-18{
+    width: 18rem;
+    margin-top: 3rem;
+}
+
+.my-word-info img.word-width-21{
+    width: 18rem;
+    margin-top: 2.3rem;
+}
+
+.word-ewm{
+    width: 8rem;
+    height: 8rem;
+    background-image: url(../img/ewm_bg.png);
+    background-size: 100% 100% ;
+    position: absolute;
+    bottom: 3rem;
+    left: 5rem;
+}
+
+.word-ewm img{
+    width: 5.6rem;
+    height: 5.6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.8rem;
+    margin-left: -2.8rem;
+}
+
+.word-ewm>p{
+    position: absolute;
+    bottom: -2rem;
+    color:#fff;
+    font-size: 0.9rem;
+}
+
+.pic-tu{
+    margin-top: 1rem;
+}
+
+.pic-tu>img{
+    width: 24rem;
+}
+
+.reset-btn button{
+    background-color: transparent;
+}
+
+.reset-btn button img{
+    width: 15rem;
+}
+
+
+/*############  最后 end #########*/

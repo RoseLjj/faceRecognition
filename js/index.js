@@ -16,6 +16,110 @@ new function() {
 
 };
 
+var imgurl = './img/man';
+var imgurl2 = './img/woman';
+var manImgArr = [
+    {
+        classname:'word-width-18',
+        url: imgurl+'1.png',
+    },
+    {
+        classname:'word-width-18',
+        url: imgurl+'2.png',
+    },
+    {
+        classname:'word-width-15',
+        url: imgurl+'3.png',
+    },
+    {
+        classname:'word-width-15',
+        url: imgurl+'4.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl+'5.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl+'6.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl+'7.png',
+    },
+    {
+        classname:'word-width-15',
+        url: imgurl+'8.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl+'9.png',
+    },
+    {
+        classname:'word-width-14',
+        url: imgurl+'10.png',
+    },
+    {
+        classname:'word-width-18',
+        url: imgurl+'11.png',
+    },
+    {
+        classname:'word-width-16',
+        url: imgurl+'12.png',
+    },
+]
+
+var womanImgArr = [
+    {
+        classname:'word-width-12',
+        url: imgurl2+'1.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl2+'2.png',
+    },
+    {
+        classname:'word-width-14',
+        url: imgurl2+'3.png',
+    },
+    {
+        classname:'word-width-14',
+        url: imgurl2+'4.png',
+    },
+    {
+        classname:'word-width-14',
+        url: imgurl2+'5.png',
+    },
+    {
+        classname:'word-width-14',
+        url: imgurl2+'6.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl2+'7.png',
+    },
+    {
+        classname:'word-width-18',
+        url: imgurl2+'8.png',
+    },
+    {
+        classname:'word-width-21',
+        url: imgurl2+'9.png',
+    },
+    {
+        classname:'word-width-18',
+        url: imgurl2+'10.png',
+    },
+    {
+        classname:'word-width-18',
+        url: imgurl2+'11.png',
+    },
+    {
+        classname:'word-width-18',
+        url: imgurl2+'12.png',
+    },
+]
+
 $(function () {
 
 })
