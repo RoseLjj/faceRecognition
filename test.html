@@ -25,10 +25,32 @@
 
 <input onchange="uploadImg(this)" type="file" name="" id="uploadImg" accept="image/*">
 <!--<div class="demo-container"><img class="fa-img" id="img" src="../../img/active/dragonBoat/zp.jpg" imgUrl="" alt=""></div>-->
-
+<button class="product">点击</button>
 </body>
 </html>
 <script>
+    var self = this;
+    $(".product").on({
+        touchstart: function(e){
+            timeOutEvent = setTimeout(function(){
+                //此处为长按事件-----在此显示遮罩层及删除按钮
+                console.log('长按');
+            },500);
+        },
+        touchmove: function(){
+            clearTimeout(timeOutEvent);
+            timeOutEvent = 0;
+            e.preventDefault();
+        },
+        touchend: function(e){
+            clearTimeout(timeOutEvent);
+            if(timeOutEvent!=0){//点击
+                console.log('点击');
+                //此处为点击事件----在此处添加跳转详情页
+            }
+            return false;
+        }
+    });
 	
     /**
      * 上传图片
@@ -150,7 +172,7 @@
     var Dataurl3 = 'https://ai.r.addops.soft.360.cn:443/rest/1.0/image/face-detection/detect';
     var Dataurl4 = '42.236.98.108:80/rest/1.0/image/face-detection/detect';
     var data = {image:base64};
-    shibie()
+//    shibie()
 //    ajaxPost()
 
     /*function ajaxPost() {
