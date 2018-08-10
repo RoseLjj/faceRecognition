@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>“”</title>
+    <meta name="description" content="分享内容"/>
+    <meta name="keywords" content="分享标题"/>
+
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
+    <script src="./js/jquery.facedetection.js"></script>
+    <script src="./js/index.js"></script>
+
+</head>
+<body>
+<!-- loading -->
+<div class="load-page">
+    <div class="load-circle">
+        <img class="load-circle-img" src="./img/circle.png" alt="">
+        <img class="load-circle-bg"  src="./img/circle_b.png" alt="">
+        <p class="load-word">加载中<span class="load-num">85</span>%...</p>
+    </div>
+</div>
+<!--主要内容-->
+<div class="content">
+    <!--1. 主题-->
+    <div class="valentine">
+        <div class="valentine-title">
+            <img class="qixi" src="./img/qixi.png" alt="">
+        </div>
+        <div class="finger">
+            <div class="fingerpint">
+                <img class="finger-img" src="./img/zhiwen2.png" alt="">
+                <img class="finger-line" src="./img/zhiwe-line.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!--选择性别-->
+    <div class="sex-selection">
+        <p><img class="sex-sel" src="./img/sex_sel.png" alt=""></p>
+        <div class="sex-box">
+            <div class="sex-boy sex-man">
+                <div class="sex-ct">
+                    <img class="img-boy" src="./img/boy.png" alt="">
+                </div>
+            </div>
+            <div class="sex-boy sex-man sex-selected">
+                <div class="sex-ct">
+                    <img class="img-boy" src="./img/girl.png" alt="">
+                </div>
+            </div>
+        </div>
+        <img src="./img/mofa.png" alt="" class="mofaM">
+        <p><img class="sex-btn" src="./img/btn1.png" alt=""></p>
+    </div>
+    <!--上传照片-->
+    <div class="upload-img">
+        <img src="./img/sz.png" alt="" class="shuzhi">
+        <div class="upload-box">
+            <img class="up-bg" src="./img/upload_img.png" alt="">
+            <img src="" alt="" class="up-pic">
+            <input onchange="uploadImg(this)" type="file" name="" id="uploadImg" accept="image/*">
+        </div>
+        <p class="upload-words"><span>数据分析中...</span></p>
+        <div class="upload-button upload-button1">
+            <button class="btn-start"><img src="./img/start.png" alt=""></button>
+        </div>
+        <div class="upload-button upload-button2">
+            <button class="btn-reset"><img src="./img/reset.png" alt=""></button>
+            <button class="btn-zhan"><img src="./img/yunshi.png" alt=""></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
