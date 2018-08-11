@@ -9,6 +9,7 @@
     <meta name="keywords" content="分享标题"/>
 
     <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/zdialog.css">
     <link rel="stylesheet" href="./css/index.css"/>
 
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -16,6 +17,8 @@
     <script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
     <script src="./js/jquery.facedetection.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/zdialog.js"></script>
+    <script src="./js/alert.js"></script>
 
 </head>
 <body>
@@ -45,35 +48,36 @@
     <div class="sex-selection">
         <p><img class="sex-sel" src="./img/sex_sel.png" alt=""></p>
         <div class="sex-box">
-            <div class="sex-boy sex-man">
+            <div class="sex-boy sex-man sex-selected" type="1">
                 <div class="sex-ct">
                     <img class="img-boy" src="./img/boy.png" alt="">
                 </div>
             </div>
-            <div class="sex-boy sex-man sex-selected">
+            <div class="sex-boy sex-man " type="2">
                 <div class="sex-ct">
                     <img class="img-boy" src="./img/girl.png" alt="">
                 </div>
             </div>
         </div>
         <img src="./img/mofa.png" alt="" class="mofaM">
-        <p><img class="sex-btn" src="./img/btn1.png" alt=""></p>
+        <p><img onclick="goCampture()" class="sex-btn" src="./img/btn1.png" alt=""></p>
     </div>
     <!--上传照片-->
     <div class="upload-img">
         <img src="./img/sz.png" alt="" class="shuzhi">
         <div class="upload-box">
             <img class="up-bg" src="./img/upload_img.png" alt="">
-            <img src="./img/people.png" alt="" class="up-pic">
+            <img src="" alt="" class="up-pic">
             <input onchange="uploadImg(this)" type="file" name="" id="uploadImg" accept="image/*">
+            <b class="pic-line"></b>
         </div>
         <p class="upload-words"><span>数据分析中...</span></p>
         <div class="upload-button upload-button1">
-            <button class="btn-start"><img src="./img/start.png" alt=""></button>
+            <button onclick="tryIt()" class="btn-start"><img src="./img/start.png" alt=""></button>
         </div>
         <div class="upload-button upload-button2">
-            <button class="btn-reset"><img src="./img/reset.png" alt=""></button>
-            <button class="btn-zhan"><img src="./img/yunshi.png" alt=""></button>
+            <button class="btn-reset" onclick="tryIt()"><img src="./img/reset.png" alt=""></button>
+            <button class="btn-zhan" onclick="goDivination()"><img src="./img/yunshi.png" alt=""></button>
         </div>
     </div>
     <div class="last-content">
@@ -103,7 +107,7 @@
             <img src="./img/save1.png" alt="">
         </div>
         <div class="reset-btn">
-            <button class="btn-res"><img src="./img/btn2.png" alt=""></button>
+            <button class="btn-res" onclick="goCampture()"><img src="./img/btn2.png" alt=""></button>
         </div>
     </div>
 </div>

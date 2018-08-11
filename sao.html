@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .code-bg{
+            position: relative;
+            height: 200px; width: 200px;
+            margin: 0px auto;/*此处为了居中*/
+            background: url(./face/img/ewm.png) center top no-repeat; /*二维码*/
+        }
+        .line{
+            position: absolute;
+            left: -80px;
+            z-index: 2;
+            height: 3px; width: 360px;
+            background: url(img/share/dapai.png) no-repeat; /*上下扫的线*/
+            /*动画效果*/
+            animation: myScan 1s infinite alternate;
+            -webkit-animation: myScan 1s infinite alternate;
+        }
+        @keyframes  myScan{
+            from { top:0px; }
+            to { top: 197px; }
+        }
+        -webkit-@keyframes  myScan{
+                    from { top:0px; }
+                    to { top: 197px; }
+                }
+    </style>
+</head>
+<body>
+<div class="code-bg">
+    <div class="line"></div>
+</div>
+</body>
+</html>

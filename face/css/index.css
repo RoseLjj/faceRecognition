@@ -11,7 +11,7 @@ html,body{
     background-image: url(../img/load_bg.png);
     background-size: 100% 100%;
     position: relative;
-    display: none;
+    /*display: none;*/
 }
 
 .load-circle{
@@ -72,6 +72,7 @@ html,body{
     background-size: 100% 100%;
     position: relative;
     text-align: center;
+    display: none;
 }
 
 /*############  大背景 end #########*/
@@ -169,7 +170,7 @@ html,body{
 /*############  上传图片 start #########*/
 .upload-img{
     position: relative;
-    display: none;
+    /*display: none;*/
 }
 
 .upload-box{
@@ -188,6 +189,47 @@ html,body{
     margin-left: -8.5rem;
     margin-top: -7.7rem;
     z-index: 5;
+    display: none;
+}
+
+.pic-line{
+    display: inline-block;
+    width: 16rem; /*17*/
+    height: 5px;
+    background-color: #AAB9FF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #6B75FE;
+    position: absolute;
+    top: 4rem; /*4*/
+    left: 50%;
+    margin-left: -8rem; /*8.5*/
+    z-index:8 ;
+    display: none;
+    animation: pic 2s linear infinite;
+}
+
+
+@keyframes pic {
+    25% {
+        /*margin-left: -1rem;*/
+        /*width:2rem;*/
+        transform:translateY(4rem);
+    }
+    50% {
+        /*margin-left: -8rem;*/
+        /*width:16rem;*/
+        transform:translateY(10rem);
+    }
+    75% {
+        /*margin-left: -8rem;*/
+        /*width:16rem;*/
+        transform:translateY(15rem);
+    }
+    100% {
+        /*margin-left: -1rem;*/
+        /*width:2rem;*/
+        transform:translateY(18rem);
+    }
 }
 
 .upload-box input{
@@ -214,6 +256,7 @@ html,body{
 .upload-words{
     font-size: 1.3rem;
     color:#fff;
+    display: none;
 }
 
 .upload-button{
@@ -251,6 +294,7 @@ button.btn-zhan{
 /*############  最后 start #########*/
 .last-content{
     padding-top: 2rem;
+    display: none;
 }
 
 .last-word{
