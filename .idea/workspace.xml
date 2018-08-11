@@ -1,86 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6fd375b-2065-488b-9854-fd3590a1b9c9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/face/css/zdialog.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/js/alert.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/js/zdialog.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sao.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/face/css/common.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/face/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face/css/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/122.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/122.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/an_ewm.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/an_ewm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/boy.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/boy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/btn1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/btn1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/btn2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/btn2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/circle.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/circle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/circle_b.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/circle_b.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/ewm.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/ewm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/ewm_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/ewm_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/girl.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/girl.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/img_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/img_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/load_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/load_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/man/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/margin.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/margin.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/mofa.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/mofa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/people.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/people.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/pic_sao.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/pic_sao.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/qixi.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/qixi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/question.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/question.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/reset.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/reset.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/save.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/save.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/save1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/save1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sex_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/sex_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sex_bg2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/sex_bg2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sex_sel.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/sex_sel.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sex_selected.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/sex_selected.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/start.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/start.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/sz.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/sz.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/upload.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/upload.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/upload2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/upload2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/upload3.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/upload3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/upload_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/upload_img.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/woman/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/word_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/word_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/word_big_bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/word_big_bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/yunshi.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/yunshi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/zhiwe-line.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/zhiwe-line.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/zhiwen.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/zhiwen.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/zhiwen1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/zhiwen1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/zhiwen2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/zhiwen2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/face/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-1.11.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/jquery-1.11.0.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery-plugin.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/jquery-plugin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.facedetection.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/jquery.facedetection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/jquery.facedetection.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/jquery.facedetection.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/mobileBUGFix.mini.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/mobileBUGFix.mini.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.html" beforeDir="false" afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
-    </list>
+    <list default="true" id="a6fd375b-2065-488b-9854-fd3590a1b9c9" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -92,7 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.42711">
+    <splitter split-orientation="horizontal" split-proportion="0.4961637">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
@@ -138,8 +59,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/face/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="282">
-                  <caret line="275" column="7" selection-start-line="275" selection-start-column="7" selection-end-line="275" selection-end-column="7" />
+                <state relative-caret-position="366">
+                  <caret line="249" column="30" selection-start-line="249" selection-start-column="30" selection-end-line="249" selection-end-column="30" />
                   <folding>
                     <element signature="n#!!block;n#loading#0" />
                   </folding>
@@ -230,7 +151,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-5" />
     <option name="y" value="19" />
     <option name="width" value="1382" />
@@ -308,16 +229,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1533959571682</updated>
-      <workItem from="1533959573274" duration="9087000" />
+      <workItem from="1533959573274" duration="9403000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9087000" />
+    <option name="totallyTimeSpent" value="9403000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-5" y="19" width="1382" height="744" extended-state="0" />
-    <editor active="true" />
+    <frame x="-5" y="19" width="1382" height="744" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12723215" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -399,8 +319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/face/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="275" column="7" selection-start-line="275" selection-start-column="7" selection-end-line="275" selection-end-column="7" />
+        <state relative-caret-position="366">
+          <caret line="249" column="30" selection-start-line="249" selection-start-column="30" selection-end-line="249" selection-end-column="30" />
           <folding>
             <element signature="n#!!block;n#loading#0" />
           </folding>
