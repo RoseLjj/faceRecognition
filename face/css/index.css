@@ -8,7 +8,7 @@ html,body{
 .load-page{
     width: 100%;
     height: 100%;
-    background-image: url(../img/load_bg.png);
+    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/load_bg.png);
     background-size: 100% 100%;
     position: relative;
     /*display: none;*/
@@ -19,13 +19,13 @@ html,body{
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-left: -4.5rem;
-    margin-top: -4.5rem;
+    margin-left: -4rem;
+    margin-top: -4rem;
 }
 
 .load-circle-img{
-    width: 9rem;
-    height: 9rem;
+    width: 8rem;
+    height: 8rem;
     position: relative;
     z-index: 10;
     animation: load 7s linear infinite;
@@ -34,7 +34,7 @@ html,body{
 .load-circle-bg{
     width: 22rem;
     position: absolute;
-    top: 6.5rem;
+    top: 5.5rem;
     z-index: 0;
     left: 50%;
     margin-left: -11rem;
@@ -45,7 +45,7 @@ html,body{
     font-size: 1.33rem;
     text-align: center;
     margin-top: 2rem;
-    text-shadow:0 0 5px #3541b3,1px 1px 1px #fff,-1px -1px 1px #fff,0 0 10px #FFFF99,0 0 20px #B9EB50;;
+    text-shadow:0 0 5px #3541b3;
 }
 
 @keyframes load {
@@ -68,7 +68,7 @@ html,body{
 .content{
     width: 100%;
     height: 100%;
-    background-image: url(../img/1.png);
+    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/1.png);
     background-size: 100% 100%;
     position: relative;
     text-align: center;
@@ -86,6 +86,32 @@ html,body{
     padding-top: 7rem;
 }
 
+.cloud{
+    position: absolute;
+    top: 9rem;
+    left: 6rem;
+    width: 5rem;
+    animation: cloud 6s  linear infinite;
+}
+
+@keyframes cloud{
+    0%{
+        transform: translateX(30px);
+    }
+    25%{
+        transform: translateX(60px);
+    }
+    50%{
+        transform: translateX(90px);
+    }
+    75%{
+        transform: translateX(60px);
+    }
+    100%{
+        transform: translateX(30px);
+    }
+}
+
 .qixi{
     width: 27rem;
 }
@@ -94,20 +120,100 @@ html,body{
 .fingerpint{
     position: absolute;
     left: 50%;
-    margin-left: -7rem;
+    margin-left: -5rem;
     margin-top: -1.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+.finger-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: finger 2s  linear infinite;
+    opacity: 0;
+}
 
+@keyframes finger {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 .fingerpint .finger-img{
-    width: 14rem;
+    position: absolute;
+    /*top: 0.5rem;*/
+    /*left: 0.5rem;*/
+    width: 13rem;
+    height: 13rem;
+    top:50%;
+    left: 50%;
+    margin-left: -6.5rem;
+    margin-top: -6.5rem;
+
 }
 
 .fingerpint .finger-line{
     position: absolute;
-    top: 6.5rem;
+    top: 4rem;
     width: 9rem;
     left: 50%;
     margin-left: -4.5rem;
+}
+
+.fingerpint .finger-line2{
+    top: 0rem;
+    animation: line 3s  linear infinite;
+}
+
+
+@keyframes line {
+    0% {
+        transform:translateY(1rem);
+    }
+    10% {
+        transform:translateY(2rem);
+    }
+    20% {
+        transform:translateY(3rem);
+    }
+    30% {
+        transform:translateY(4rem);
+    }
+    40% {
+        transform:translateY(5rem);
+    }
+    50% {
+        transform:translateY(7rem);
+    }
+    60% {
+        transform:translateY(5rem);
+    }
+    70% {
+        transform:translateY(4rem);
+    }
+    80% {
+        transform:translateY(3rem);
+    }
+    90% {
+        transform:translateY(2rem);
+    }
+    100% {
+        transform:translateY(1rem);
+    }
+
 }
 /*############  主题 end #########*/
 /*############  性别 start #########*/
@@ -126,28 +232,64 @@ html,body{
 
 .sex-man{
     position: relative;
+    display: inline-block;
 }
 
 .sex-ct{
     display: inline-block;
-    width: 13rem;
-    height: 13rem;
-    background-size: 100% 100%;
+    width: 14rem;
+    height: 14rem;
+    background-color: transparent;
 }
 
-.sex-selected .sex-ct{
-    width: 16rem;
-    height: 16rem;
-    background-image: url(../img/sex_bg.png);
+.sex-ct .se-bg-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.sex-selected .sex-ct .se-bg-bg{
+    display: inline-block;
+    animation: brain 2s  linear infinite;
+}
+
+@keyframes brain {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes chi1 {
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 .sex-man .img-boy{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 12rem;
-    margin-left: -6rem;
-    margin-top: -6.5rem;
+    width: 10rem;
+    margin-left: -5rem;
+    margin-top: -5.5rem;
 }
 
 .sex-man:nth-of-type(2){
@@ -162,7 +304,7 @@ html,body{
 }
 
 .sex-btn{
-    width: 15rem;
+    width: 13rem;
     margin-top: 2.4rem;
 }
 
@@ -170,24 +312,24 @@ html,body{
 /*############  上传图片 start #########*/
 .upload-img{
     position: relative;
-    /*display: none;*/
+    display: none;
 }
 
 .upload-box{
     display: inline-block;
-    margin-top: 7rem;
+    margin-top: 9rem;
     position: relative;
 }
 
 .upload-box .up-pic{
     position: absolute;
-    width: 17rem;
-    height: 17rem;
+    width: 15.4rem;
+    height: 15.4rem;
     border-radius: 50%;
     top: 50%;
     left: 50%;
-    margin-left: -8.5rem;
-    margin-top: -7.7rem;
+    margin-left: -7.7rem;
+    margin-top: -7rem;
     z-index: 5;
     display: none;
 }
@@ -211,24 +353,44 @@ html,body{
 
 @keyframes pic {
     25% {
-        /*margin-left: -1rem;*/
-        /*width:2rem;*/
         transform:translateY(4rem);
     }
     50% {
-        /*margin-left: -8rem;*/
-        /*width:16rem;*/
-        transform:translateY(10rem);
+        transform:translateY(8rem);
     }
     75% {
-        /*margin-left: -8rem;*/
-        /*width:16rem;*/
-        transform:translateY(15rem);
+        transform:translateY(12rem);
     }
     100% {
-        /*margin-left: -1rem;*/
-        /*width:2rem;*/
-        transform:translateY(18rem);
+        transform:translateY(16rem);
+    }
+}
+
+.word-point2{
+    display: inline-block;
+    animation: point 2s linear infinite;
+}
+
+.upload-words2:nth-of-type(2){
+    margin-bottom: 0.5rem;
+}
+
+
+@keyframes point {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
     }
 }
 
@@ -243,20 +405,64 @@ html,body{
 }
 
 .upload-box img{
-    width: 22rem;
+    width: 20rem;
 }
 
 .shuzhi{
-    width: 19rem;
+    width: 10rem;
     position: absolute;
     right: 0;
-    top: 18rem;
+    top: 19.5rem;
+}
+
+.touying{
+    width: 14rem;
+    position: absolute;
+    right: 5.5rem;
+    top: 17.5rem;
+    animation: touying 2s linear infinite;
+}
+
+
+@keyframes touying {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 .upload-words{
     font-size: 1.3rem;
     color:#fff;
     display: none;
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    margin-left: -5rem;
+}
+
+.upload-words1{
+    margin-left: -3rem;
+}
+
+.upload-words:nth-of-type(2){
+    margin-left: -5rem;
+}
+
+.upload-words:nth-of-type(3){
+    top: 32rem;
+    margin-left: -7rem;
 }
 
 .upload-button{
@@ -268,7 +474,7 @@ html,body{
 }
 
 .upload-button button img{
-    width: 15rem;
+    width: 12.3rem;
 }
 
 .upload-button1{
@@ -282,27 +488,43 @@ html,body{
 
 button.btn-reset{
     position: relative;
-    left: 1.5rem;
+    left: -0.5rem;
 }
 
 button.btn-zhan{
     position: relative;
-    right: 1.5rem;
+    right: -0.5rem;
 }
 
 /*############  上传图片 end #########*/
 /*############  最后 start #########*/
 .last-content{
     padding-top: 2rem;
-    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -10;
+}
+
+.last-content1{
+    z-index: 0;
 }
 
 .last-word{
     position: relative;
+    display: inline-block;
+}
+
+.last-word2{
+    display: none;
+}
+
+.last-word2>img{
+    width: 24rem;
 }
 
 .word-big-bg{
-    width: 28rem;
+    width: 24rem;
 }
 
 .user-img-bg{
@@ -313,7 +535,7 @@ button.btn-zhan{
 .user-info{
     position: absolute;
     top: 2rem;
-    left: 5rem;
+    left: 2rem;
 }
 
 .user-img{
@@ -347,13 +569,13 @@ button.btn-zhan{
 
 .my-word{
     position: absolute;
-    top: 12rem;
-    left: 5rem;
+    top: 10rem;
+    left: 1rem;
 }
 
 .my-word-info{
     width: 22rem;
-    height: 11.2rem;
+    height: 12.2rem;
     background-image: url(../img/word_bg.png);
     background-size: 100% 100%;
 }
@@ -391,30 +613,31 @@ button.btn-zhan{
 }
 
 .word-ewm{
-    width: 8rem;
-    height: 8rem;
+    width: 6rem;
+    height: 6rem;
     background-image: url(../img/ewm_bg.png);
     background-size: 100% 100% ;
     position: absolute;
     bottom: 3rem;
-    left: 5rem;
+    left: 2rem;
 }
 
 .word-ewm img{
-    width: 5.6rem;
-    height: 5.6rem;
+    width: 4.4rem;
+    height: 4.4rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -2.8rem;
-    margin-left: -2.8rem;
+    margin-top: -2.2rem;
+    margin-left: -2.2rem;
 }
 
 .word-ewm>p{
     position: absolute;
     bottom: -2rem;
     color:#fff;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
+    text-align: center;
 }
 
 .pic-tu{
@@ -422,7 +645,7 @@ button.btn-zhan{
 }
 
 .pic-tu>img{
-    width: 24rem;
+    width: 21rem;
 }
 
 .reset-btn button{
@@ -430,7 +653,7 @@ button.btn-zhan{
 }
 
 .reset-btn button img{
-    width: 15rem;
+    width: 13rem;
 }
 
 

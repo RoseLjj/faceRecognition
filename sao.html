@@ -1,38 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
     <style>
-        .code-bg{
-            position: relative;
-            height: 200px; width: 200px;
-            margin: 0px auto;/*此处为了居中*/
-            background: url(./face/img/ewm.png) center top no-repeat; /*二维码*/
+
+        div{
+            -webkit-animation: twinkling 1s infinite ease-in-out
         }
-        .line{
-            position: absolute;
-            left: -80px;
-            z-index: 2;
-            height: 3px; width: 360px;
-            background: url(img/share/dapai.png) no-repeat; /*上下扫的线*/
-            /*动画效果*/
-            animation: myScan 1s infinite alternate;
-            -webkit-animation: myScan 1s infinite alternate;
+        .animated{
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both
         }
-        @keyframes  myScan{
-            from { top:0px; }
-            to { top: 197px; }
+        @-webkit-keyframes twinkling{
+            0%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
         }
-        -webkit-@keyframes  myScan{
-                    from { top:0px; }
-                    to { top: 197px; }
-                }
+        @keyframes twinkling{
+            0%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+
+
+        .title-h{
+            display: inline-block;
+            font-size: 1.8rem;
+            padding-top: 6%;
+            margin-bottom: 5%;
+            font-weight: normal;
+            letter-spacing: .3rem;
+            overflow: hidden;
+            /*padding-left: 29.2%;*/
+            /*-webkit-animation: type 2s steps(50, end) forwards;*/
+            /*animation: type 2s steps(5) forwards;*/
+            /*animation: typing 1.5s steps(7)  forwards;*/
+            animation: point 2s linear infinite;
+        }
+        @keyframes point {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*.typing{
+            text-align: center;
+            color: black;
+            width:100%;
+            white-space:nowrap;
+            overflow:hidden;
+        }
+        @-webkit-keyframes type{
+            from { width: 0;}
+        }
+
+        */
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 236px;
+            }
+        }
+        .word-point{
+            font-size: 40px;
+        }
     </style>
 </head>
 <body>
-<div class="code-bg">
-    <div class="line"></div>
+<i class="word-point">.</i>
+<i class="word-point">.</i>
+<i class="word-point">.</i>
+<h1 class="typing title-h">招募优秀艺术家</h1>
+
+
+<div>
+    此处是闪烁的内容
 </div>
+
 </body>
 </html>

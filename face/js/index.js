@@ -16,8 +16,8 @@ new function() {
 
 };
 
-var imgurl = './img/man/';
-var imgurl2 = './img/woman/';
+var imgurl = 'http://h5.flyfinger.com/2018/O/os/face/img/man/';
+var imgurl2 = 'http://h5.flyfinger.com/2018/O/os/face/img/woman/';
 var manImgArr = [
     {
         classname:'word-width-18',
@@ -129,6 +129,9 @@ $(function () {
     loading(); //加载
     pressFinger(); //长按指纹
     toggleSex();//切换性别
+    $('.btn-start').on('touchstart',function () {
+        bLine()
+    })
 })
 
 /**
@@ -150,9 +153,11 @@ function loading() {
             if (load >= 100) {
                 clearInterval(clearTime2)
                 $('.load-page').hide();
-                $('.content>div').hide();
-                $('.content>div.valentine').show();
-                $('.content').show();
+                $('.finger-line').removeClass('finger-line2')
+                $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+                $('.content>div').fadeOut(500);
+                $('.content>div.valentine').fadeIn(1000);
+                $('.content').fadeIn(1000);
             }
         }, 200)
     }, 2100)
@@ -164,6 +169,8 @@ function loading() {
 function pressFinger(){
     $(".fingerpint").on({
         touchstart: function(e){
+            $('.finger-line').addClass('finger-line2')
+            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_02.png')
             timeOutEvent = setTimeout(function(){
                 //此处为长按事件-----在此显示遮罩层及删除按钮
                 $('.content>div').fadeOut(500);
@@ -177,8 +184,11 @@ function pressFinger(){
         },
         touchend: function(e){
             clearTimeout(timeOutEvent);
+            $('.finger-line').removeClass('finger-line2')
+            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
             if(timeOutEvent!=0){//点击
                 console.log('点击');
+
                 //此处为点击事件----在此处添加跳转详情页
             }
             return false;
@@ -190,9 +200,9 @@ function pressFinger(){
  * 切换性别
  */
 function toggleSex(){
-    $('.sex-boy').on('click',function () {
+    $('.sex-boy button').on('touchstart',function () {
         $('.sex-boy').removeClass('sex-selected');
-        $(this).addClass('sex-selected');
+        $(this).parent().addClass('sex-selected');
     })
 }
 
@@ -200,9 +210,11 @@ function toggleSex(){
  * 性别-->拍照
  */
 function goCampture(){
+
     $('.up-pic').attr('src','');
     $('.content>div.upload-img .upload-button1').show();
     $('.content>div.upload-img .upload-button2').hide();
+
     $('.content>div').fadeOut(500);
     $('.content>div.upload-img').fadeIn(1000);
 }
@@ -213,23 +225,57 @@ function goCampture(){
  * @param that
  */
 function uploadImg(that) {
+    var status = 0;
+
     var file = that.files[0];
     var r = new FileReader();
     r.readAsDataURL(file);
+    setTimeout(function () {
+        if(status != 1){//图片已加载完
+            $('.upload-words').hide();
+            $('.upload-words1').show();
+        }
+    },1000)
     $(r).load(function () {
-        $('.up-pic').attr('src', this.result).show();
+        $('.up-pic').attr({
+            'src': this.result,
+            'status':1,
+        }).show();
+        status = 1;
+        $('.upload-words').hide();
     })
 }
 
 
 function tryIt() {
-    var img = $('.up-pic').attr('src');
-    if(isNullOrEmpty(img)){
+
+    var status = $('.up-pic').attr('status');
+    if(status == 0){
         alert("请上传照片");
         return;
     }
+    // bLine()
+
+    $('.last-content').removeClass('last-content1');
+    $('.last-word ').hide();
+    $('.last-word1 ').show();
+    if($('.sex-selected').attr('type') == 1 ){//男
+        var random = Math.ceil(Math.random() * manImgArr.length);
+        $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+    }else{
+        var random = Math.ceil(Math.random() * womanImgArr.length);
+        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+    }
+    $('.last-content').show();
+
+    setTimeout(function () {
+        zhongPic()
+    },1000)
+
+
     var flag = 0;
-    $('.pic-line').css('display','inline-block');
+
+
     clearTime3 = setInterval(function () {
         if(flag == 1){
             alert('没有检测到图片中的人像');
@@ -238,7 +284,7 @@ function tryIt() {
         if(flag == 2){
             scanOver(1);
         }
-    },2000)
+    },4000)
     $('.up-pic').faceDetection({
         complete: function (faces) {
             console.log(faces);
@@ -271,6 +317,18 @@ function tryIt() {
     });
 }
 
+function bLine(){
+    var status = $('.up-pic').attr('status');
+    if(isNullOrEmpty(status) || status == 0){
+        alert("请上传照片");
+        return;
+    }else {
+        $('.upload-words').hide();
+        $('.upload-words2').show();
+        $('.jiaqiang').show();
+    }
+}
+
 /**
  * 扫描完成
  * @param type 1:有人物,2,无人或错误
@@ -283,6 +341,7 @@ function scanOver(type){
     }else{
         $('.pic-line').hide();
     }
+    $('.upload-words').hide();
     clearInterval(clearTime3);
 }
 
@@ -290,16 +349,11 @@ function scanOver(type){
  * 去占卜
  */
 function goDivination(){
-    if($('.sex-selected').attr('type') == 1 ){//男
-        var random = Math.ceil(Math.random() * manImgArr.length);
-        $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
-    }else{
-        var random = Math.ceil(Math.random() * womanImgArr.length);
-        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
-    }
-
-    $('.content>div').fadeOut(500);
-    $('.content>div.last-content').fadeIn(1000);
+    $('.content>div').hide();
+    $('.content>div.last-content').show();
+    $('.last-content').addClass('last-content1')
+    $('.last-word ').hide();
+    $('.last-word2 ').show();
 
 }
 
@@ -316,5 +370,36 @@ function isNullOrEmpty(strVal) {
     } else {
         return false;
     }
+}
+
+function zhongPic() {
+
+    var targetDom = $('.last-word1')
+    var copyDom = targetDom.clone();
+    copyDom.width(targetDom.width() + "px");
+    copyDom.height(targetDom.height() + "px");
+
+    $('body').append(copyDom);
+    copyDom.css({
+        'opacity': '0'
+    });
+
+    html2canvas(targetDom, {
+        // allowTaint: true,
+        // taintTest: false,
+        useCORS: true,
+        logging: true,
+        onrendered: function (canvas) {
+            var dataUrl = canvas.toDataURL();
+
+            copyDom.remove();
+            if (dataUrl == 'data:,') {
+                zhongPic();
+            } else {
+               $('.last-word2 img').attr('src',dataUrl)
+            }
+        }
+    });
+
 }
 

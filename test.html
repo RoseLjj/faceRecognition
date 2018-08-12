@@ -200,13 +200,13 @@
         var Dataurl2 = 'https://ai.r.addops.soft.360.cn:80/rest/1.0/image/face-detection/detect';
         var dataUrl = 'https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect'; //最新
 
-        $.ajax({
+        /*$.ajax({
             type: 'POST',
-            url: 'https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect',             dataType:'json',
+            url: 'https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect',                     dataType:'json',
             headers:{
                 Authorization: 'Basic QWxhZGRpbjpPcGVuU2VzYW1l'
             }
-        })
+        })*/
         /*
         $.ajax({
             url: dataUrl,
@@ -226,7 +226,6 @@
             error: function () {
             }
         });*/
-/*
         var data = new FormData();
         data.append('image', base64);
         $.ajax({
@@ -248,7 +247,7 @@
             success: function (data) {
                 console.log(data);
             },
-        });*/
+        });
     }
 
 </script>
