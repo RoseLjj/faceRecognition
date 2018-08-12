@@ -16,8 +16,8 @@ new function() {
 
 };
 
-var imgurl = 'http://h5.flyfinger.com/2018/O/os/face/img/man/';
-var imgurl2 = 'http://h5.flyfinger.com/2018/O/os/face/img/woman/';
+var imgurl = './img/man/';
+var imgurl2 = './img/woman/';
 var manImgArr = [
     {
         classname:'word-width-18',
@@ -154,7 +154,7 @@ function loading() {
                 clearInterval(clearTime2)
                 $('.load-page').hide();
                 $('.finger-line').removeClass('finger-line2')
-                $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+                $('.finger-img').attr('src','./img/finger_01.png')
                 $('.content>div').fadeOut(500);
                 $('.content>div.valentine').fadeIn(1000);
                 $('.content').fadeIn(1000);
@@ -170,7 +170,7 @@ function pressFinger(){
     $(".fingerpint").on({
         touchstart: function(e){
             $('.finger-line').addClass('finger-line2')
-            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_02.png')
+            $('.finger-img').attr('src','./img/finger_02.png')
             timeOutEvent = setTimeout(function(){
                 //此处为长按事件-----在此显示遮罩层及删除按钮
                 $('.content>div').fadeOut(500);
@@ -185,7 +185,7 @@ function pressFinger(){
         touchend: function(e){
             clearTimeout(timeOutEvent);
             $('.finger-line').removeClass('finger-line2')
-            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+            $('.finger-img').attr('src','./img/finger_01.png')
             if(timeOutEvent!=0){//点击
                 console.log('点击');
 
