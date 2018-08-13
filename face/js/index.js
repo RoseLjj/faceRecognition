@@ -124,15 +124,138 @@ var load = 0;
 var clearTime1;
 var clearTime2;
 var clearTime3;
+var flag_mus = 0; //音频
 
 $(function () {
+    if(is_weixn()) {
+        //微信授权
+        //OpenId
+        var OpenId = getUrlParam('OpenId');
+        var NickName = getUrlParam('NickName');
+        var HeadImgURL = getUrlParam('HeadImgURL')
+        if(isNullOrEmpty(OpenId) && isNullOrEmpty(NickName) && isNullOrEmpty(HeadImgURL)){//没有授权
+            window.location.href = 'http://h5.flyfinger.com/360loophole/index';
+        }else{
+            NickName = decodeURI(NickName);
+            // getbase64(HeadImgURL);
+            $('.user-header-img').attr('src',HeadImgURL);
+            $('.user-header-img').attr('crossOrigin','Anonymous');
+            $('.user-name-info>span').text(NickName);
+            $('.user-header-img').show();
+            $('.user-name-info').show();
+            $('.user-love').text('的爱情运势');
+        }
+        share();//微信分享
+        //音频播放
+        var audio = document.querySelector("#musicfx");
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            if(flag_mus == 0) {
+                audio.play();
+                flag_mus = 1;
+            }
+        }, false);
+    }else{
+        $('.user-header-img').hide();
+        $('.user-name-info').hide();
+        $('.user-love').text('爱情运势');
+
+       /* $('body').one('touchstart', function () {
+            if(flag_mus == 0) {
+                document.getElementById('musicfx').play();
+                flag_mus = 1;
+            }
+        })*/
+
+        setInterval(function () {
+            document.getElementById('musicfx').play();
+
+        },10)
+    }
+
+
+
     loading(); //加载
     pressFinger(); //长按指纹
     toggleSex();//切换性别
     $('.btn-start').on('touchstart',function () {
         bLine()
     })
+
+
+
 })
+
+function getbase64(url) {
+    var can = document.createElement('canvas');
+    var ctx = can.getContext("2d");
+    var image = new Image();
+    image.crossOrigin = "Anonymous";
+    image.src = url;
+    image.onload = function () {
+        can.width = this.width;
+        can.height = this.height;
+        ctx.drawImage(this,0,0);
+        var base64 = can.toDataURL();
+        $('.user-header-img').attr('src',base64);
+    }
+}
+
+function getUrlParam(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+    //console.log(unescape(r[2]));
+    if (r != null) return (r[2]);
+    return null; //返回参数值
+}
+
+function share() {
+    //先定义分享参数对象,全参数为（可按需配置 ）：
+    var options = {
+        'id':"七夕爱情运势", //项目名
+        'title':'你的好友被测出是百年一见的独孤星人，你也试试？',
+        'desc':'人工智能占卜你的七夕爱情运势，还不快来测测看',
+        'link':"http://h5.flyfinger.com/2018/O/os/face/index.html",
+        'imgUrl':"http://h5.flyfinger.com/2018/O/os/face/img/share.jpg",
+        //        'type':'分享类型,music、video或link，不填默认为link',
+        //        'dataUrl':' 如果type是music或video，则要提供数据链接，默认为空',
+        //        'success':function(){
+        //            alert('分享成功加调');
+        //        },
+        //        'cancel':function(){
+        //            alert('分享取消回调');
+        //        },
+        //        'trigger':function(){
+        //            alert('调起微信菜单');
+        //        },
+        //        'fail':function(){
+        //            alert('调用失败回调');
+        //        }
+    };
+    //后定义实例(注：实例名不能为关键字和'wx')：
+    var _wx_share = new WxShare(options);
+    //如要在中途重置分享信息，调用setOptions方法：
+    //    _wx_share.setOptions({
+    //        'title':'修改后的分享标题'
+    //    });
+    //如要在中途重置分享给朋友，调用setAppMessageOptions方法：
+    //    _wx_share.setAppMessageOptions({
+    //        'title':'修改后分享给朋友的分享标题'
+    //    });
+    //如要在中途重置分享到朋友圈，调用setTimeLineOptions方法：
+    _wx_share.setTimeLineOptions({
+        'title':"朋友圈title重置"
+    });
+}
+
+/***
+ * 判断是否是微信浏览器
+ * @returns {boolean}
+ */
+function is_weixn() {
+    var ua = navigator.userAgent.toLowerCase();
+    var isWeixin = ua.indexOf('micromessenger') != -1;
+    return isWeixin;
+}
 
 /**
  * 加载
@@ -152,16 +275,19 @@ function loading() {
             $('.load-page .load-num').text(load);
             if (load >= 100) {
                 clearInterval(clearTime2)
-                $('.load-page').hide();
+                $('.content>div').hide();
+                $('.load-page').slideUp();
                 $('.finger-line').removeClass('finger-line2')
                 $('.finger-img').attr('src','./img/finger_01.png')
-                $('.content>div').fadeOut(500);
-                $('.content>div.valentine').fadeIn(1000);
-                $('.content').fadeIn(1000);
+
+                $('.content>div.valentine').show();
+                $('.content').slideDown();
             }
         }, 200)
     }, 2100)
 }
+
+
 
 /**
  * 按指纹
@@ -173,8 +299,8 @@ function pressFinger(){
             $('.finger-img').attr('src','./img/finger_02.png')
             timeOutEvent = setTimeout(function(){
                 //此处为长按事件-----在此显示遮罩层及删除按钮
-                $('.content>div').fadeOut(500);
-                $('.content>div.sex-selection').fadeIn(1000);
+                $('.content>div').slideUp();
+                $('.content>div.sex-selection').slideDown();
             },500);
         },
         touchmove: function(){
@@ -215,8 +341,8 @@ function goCampture(){
     $('.content>div.upload-img .upload-button1').show();
     $('.content>div.upload-img .upload-button2').hide();
 
-    $('.content>div').fadeOut(500);
-    $('.content>div.upload-img').fadeIn(1000);
+    $('.content>div').slideUp();
+    $('.content>div.upload-img').slideDown();
 }
 
 
@@ -269,7 +395,7 @@ function tryIt() {
     $('.last-content').show();
 
     setTimeout(function () {
-        zhongPic()
+        // zhongPic()
     },1000)
 
 
@@ -344,6 +470,18 @@ function scanOver(type){
     $('.upload-words').hide();
     clearInterval(clearTime3);
 }
+/*
+/!**
+ * 去占卜
+ *!/
+function goDivination2(){
+    $('.content>div').hide();
+    $('.content>div.last-content').show();
+    $('.last-content').addClass('last-content1')
+    $('.last-word ').hide();
+    $('.last-word2 ').show();
+
+}*/
 
 /**
  * 去占卜
@@ -352,11 +490,16 @@ function goDivination(){
     $('.content>div').hide();
     $('.content>div.last-content').show();
     $('.last-content').addClass('last-content1')
-    $('.last-word ').hide();
-    $('.last-word2 ').show();
 
+    html2canvas(document.querySelector('.last-word1'), {
+        useCORS: true,
+        backgroundColor: null
+    }).then(function (canvas) {
+        var dataUrl = canvas.toDataURL('image/png');
+        $('.last-word2 img').attr('src',dataUrl);
+        $('.last-word2 ').show();
+    });
 }
-
 
 
 /**

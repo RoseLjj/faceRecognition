@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>“七夕”爱情运势</title>
+    <meta name="description" content="分享内容"/>
+    <meta name="keywords" content="分享标题"/>
+
+    <link rel="stylesheet" href="./css/common.css"/>
+    <link rel="stylesheet" href="./css/zdialog.css">
+    <link rel="stylesheet" href="./css/index.css?v=1.1.5"/>
+
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <!--<script type="text/javascript" src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>-->
+    <script type="text/javascript" src="./js/jquery-1.11.0.js"></script>
+    <script src="./js/jquery.facedetection.js"></script>
+    <script src="./js/index.js?v=1.1.2"></script>
+    <script src="./js/zdialog.js"></script>
+    <script src="./js/html2canvas.js"></script>
+    <!--<script src="./js/alert.js"></script>-->
+
+    <script>
+        $('.last-content').css('diplay','block')
+        function zhongPic2(){
+            var w = $(".last-word1").width();
+            var h = $(".last-word1").height();
+
+            var bei = 1;
+            //要将 canvas 的宽高设置成容器宽高的 2 倍
+            var canvas = document.createElement("canvas");
+            canvas.width = w * bei;
+            canvas.height = h * bei;
+            canvas.style.width = w + "px";
+            canvas.style.height = h + "px";
+            var context = canvas.getContext("2d");
+            //然后将画布缩放，将图像放大两倍画到画布上
+            context.scale(bei, bei);
+
+            html2canvas(document.querySelector(".last-word1"), {
+                canvas: canvas,
+                useCORS: true,
+                logging: true,
+                onrendered: function (canvas) {
+                    var url = canvas.toDataURL("image/png"); //base64数据
+                    $('.last-word2 img').attr('src',url)
+                }
+            });
+        }
+
+        function zhongPic() {
+
+            var targetDom = $('.last-word1')
+            var copyDom = targetDom.clone();
+            copyDom.width(targetDom.width()*4 + "px");
+            copyDom.height(targetDom.height()*4 + "px");
+
+            $('body').append(copyDom);
+            copyDom.css({
+                'opacity': '0'
+            });
+
+            html2canvas(targetDom, {
+                // allowTaint: true,
+                // taintTest: false,
+                useCORS: true,
+                logging: true,
+                onrendered: function (canvas) {
+                    var dataUrl = canvas.toDataURL();
+
+                    copyDom.remove();
+                    if (dataUrl == 'data:,') {
+                        zhongPic();
+                    } else {
+                        $('.last-word2 img').attr('src',dataUrl)
+                    }
+                }
+            });
+
+        }
+    </script>
+</head>
+<body>
+<!-- loading -->
+<div class="load-page" style="display: none">
+    <div class="load-circle">
+        <img class="load-circle-img" src="./img/circle.png" alt="">
+        <img class="load-circle-bg"  src="./img/circle_b.png" alt="">
+        <p class="load-word">加载中<span class="load-num">85</span>%...</p>
+    </div>
+</div>
+<!--主要内容-->
+<div class="content" style="display: block">
+
+    <div class="last-content" style="display: block">
+        <div class="last-word last-word1">
+            <img class="word-big-bg" src="./img/word_big_bg.png" alt="">
+            <div class="user-info">
+                <div class="user-img">
+                    <img class="user-img-bg" src="./img/img_bg.png" alt="">
+                    <img class="user-header-img" src="./img/people.png" alt="">
+                </div>
+                <ul>
+                    <li class="user-name user-name-info">&gt; <span>总有刁民想害朕</span> &lt;</li>
+                    <li class="user-name">的爱情运势</li>
+                </ul>
+            </div>
+            <div class="my-word">
+                <div class="my-word-info">
+                    <img class="word-width-14" src="./img/man/10.png" alt="">
+                </div>
+            </div>
+            <div class="word-ewm">
+                <img src="./img/z_ewm.png" alt="" class="ewm">
+                <p>长按识别二维码占卜</p>
+            </div>
+        </div>
+        <div class="last-word last-word2">
+            <img src="" alt="">
+        </div>
+        <div class="pic-tu">
+            <img src="./img/save1.png" alt="">
+        </div>
+        <div class="reset-btn">
+            <button class="btn-res" onclick="zhongPic()"><img src="./img/btn2.png" alt=""></button>
+        </div>
+    </div>
+</div>
+</body>
+</html>

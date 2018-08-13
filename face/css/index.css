@@ -3,12 +3,24 @@ html,body{
     width: 100%;
     height: 100%;
 }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+*:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+}
 /*############  loading start #########*/
 
 .load-page{
     width: 100%;
     height: 100%;
-    background-image: url(../img/load_bg.png);
+    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/load_bg.png);
     background-size: 100% 100%;
     position: relative;
     /*display: none;*/
@@ -68,7 +80,7 @@ html,body{
 .content{
     width: 100%;
     height: 100%;
-    background-image: url(../img/1.png);
+    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/1.png);
     background-size: 100% 100%;
     position: relative;
     text-align: center;
@@ -121,7 +133,7 @@ html,body{
     position: absolute;
     left: 50%;
     margin-left: -5rem;
-    margin-top: -1.5rem;
+    margin-top: -2.5rem;
     width: 10rem;
     height: 10rem;
 }
@@ -133,6 +145,7 @@ html,body{
     height: 100%;
     animation: finger 2s  linear infinite;
     opacity: 0;
+    pointer-events: none;
 }
 
 @keyframes finger {
@@ -162,6 +175,7 @@ html,body{
     left: 50%;
     margin-left: -6.5rem;
     margin-top: -6.5rem;
+    pointer-events: none;
 
 }
 
@@ -171,11 +185,13 @@ html,body{
     width: 9rem;
     left: 50%;
     margin-left: -4.5rem;
+    pointer-events: none;
 }
 
 .fingerpint .finger-line2{
     top: 0rem;
     animation: line 3s  linear infinite;
+    pointer-events: none;
 }
 
 
@@ -301,6 +317,11 @@ html,body{
     position: absolute;
     right: 0;
     top: 19.5rem;
+}
+
+.btn-sec{
+    position: relative;
+    top: -2rem
 }
 
 .sex-btn{
@@ -466,7 +487,7 @@ html,body{
 }
 
 .upload-button{
-    margin-top: 10rem;
+    margin-top: 8rem;
 }
 
 .upload-button button{
@@ -482,7 +503,7 @@ html,body{
 }
 
 .upload-button2{
-    margin-top: 12rem;
+    margin-top: 10rem;
     display: none;
 }
 
@@ -516,7 +537,12 @@ button.btn-zhan{
 }
 
 .last-word2{
-    display: none;
+    position: absolute;
+    width: 24rem;
+    top: 2rem;
+    left: 50%;
+    margin-left:-12rem;
+    opacity:0;
 }
 
 .last-word2>img{
@@ -658,3 +684,21 @@ button.btn-zhan{
 
 
 /*############  最后 end #########*/
+
+@media (device-width: 375px) and (device-height: 812px) and (-webkit-min-device-pixel-ratio : 3){
+    .last-content{
+        padding-top: 4rem;
+    }
+    .pic-tu{
+        margin-top: 2rem;
+    }/*
+    !*如果以后出现375*812,非ios机型，可以加上下面语句*!
+    @supports (bottom: constant(safe-area-inset-bottom)) {
+        .last-content{
+            padding-top: 4rem;
+        }
+        .pic-tu{
+            margin-top: 2rem;
+        }
+    }*/
+}
