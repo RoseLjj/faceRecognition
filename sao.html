@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        div{
+            -webkit-animation: twinkling 1s infinite ease-in-out
+        }
+        .animated{
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both
+        }
+        @-webkit-keyframes twinkling{
+            0%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+        @keyframes twinkling{
+            0%{
+                opacity: 0.5;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+
+
+        .title-h{
+            display: inline-block;
+            font-size: 1.8rem;
+            padding-top: 6%;
+            margin-bottom: 5%;
+            font-weight: normal;
+            letter-spacing: .3rem;
+            overflow: hidden;
+            /*padding-left: 29.2%;*/
+            /*-webkit-animation: type 2s steps(50, end) forwards;*/
+            /*animation: type 2s steps(5) forwards;*/
+            /*animation: typing 1.5s steps(7)  forwards;*/
+            animation: point 2s linear infinite;
+        }
+        @keyframes point {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*.typing{
+            text-align: center;
+            color: black;
+            width:100%;
+            white-space:nowrap;
+            overflow:hidden;
+        }
+        @-webkit-keyframes type{
+            from { width: 0;}
+        }
+
+        */
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 236px;
+            }
+        }
+        .word-point{
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+<i class="word-point">.</i>
+<i class="word-point">.</i>
+<i class="word-point">.</i>
+<h1 class="typing title-h">招募优秀艺术家</h1>
+
+
+<div>
+    此处是闪烁的内容
+</div>
+
+</body>
+</html>

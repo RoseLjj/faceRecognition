@@ -9,12 +9,12 @@
     <meta name="description" content="双节同庆领双份万元旅行大奖，送父亲一场难忘的旅行！"/>
     <meta name="keywords" content="你是我见过最美的一座山"/>
 
-    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="face/css/common.css"/>
 
     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="face/js/jquery-1.11.0.js"></script>
     <script type="text/javascript" src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
-    <script src="js/jquery.facedetection.js"></script>
+    <script src="face/js/jquery.facedetection.js"></script>
     <style>
         #img{
             width: 300px;
@@ -172,7 +172,11 @@
     var Dataurl3 = 'https://ai.r.addops.soft.360.cn:443/rest/1.0/image/face-detection/detect';
     var Dataurl4 = '42.236.98.108:80/rest/1.0/image/face-detection/detect';
     var data = {image:base64};
+<<<<<<< HEAD
     shibie()
+=======
+   shibie()
+>>>>>>> 9768bc5794ee2ab46df534d382a04145e75b3f24
 //    ajaxPost()
 
     /*function ajaxPost() {
@@ -197,24 +201,35 @@
             console.log(data);
         },'json')*/
 
-       /* var Dataurl2 = 'https://ai.r.addops.soft.360.cn:80/rest/1.0/image/face-detection/detect';
+        var Dataurl2 = 'https://ai.r.addops.soft.360.cn:80/rest/1.0/image/face-detection/detect';
         var dataUrl = 'https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect'; //最新
+
+        /*$.ajax({
+            type: 'POST',
+            url: 'https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect',                     dataType:'json',
+            headers:{
+                Authorization: 'Basic QWxhZGRpbjpPcGVuU2VzYW1l'
+            }
+        })*/
+        /*
         $.ajax({
             url: dataUrl,
             type: 'POST',
-            data: data,
+            data: {image:base64},
             dataType:'json',
+            xhrFields:{
+                withCredentials:true,
+            },
             headers: {
                 'Authorization': 'Basic QWxhZGRpbjpPcGVuU2VzYW1l',
                 'Content-Type':'application/json'
             },
             success: function (data) {
-
+                console.log(data);
             },
             error: function () {
             }
         });*/
-
         var data = new FormData();
         data.append('image', base64);
         $.ajax({
@@ -227,11 +242,14 @@
             crossDomain: true,
             withCredentials: false,
             processData:false,
+            xhrFields:{
+                withCredentials:true,
+            },
             beforeSend: function (xhr) {
                 xhr.setRequestHeader ("Authorization", "Basic  QWxhZGRpbjpPcGVuU2VzYW1l");
             },
             success: function (data) {
-
+                console.log(data);
             },
         });
     }

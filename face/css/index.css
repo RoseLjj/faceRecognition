@@ -1,0 +1,660 @@
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/*############  loading start #########*/
+
+.load-page{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/load_bg.png);
+    background-size: 100% 100%;
+    position: relative;
+    /*display: none;*/
+}
+
+.load-circle{
+    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -4rem;
+    margin-top: -4rem;
+}
+
+.load-circle-img{
+    width: 8rem;
+    height: 8rem;
+    position: relative;
+    z-index: 10;
+    animation: load 7s linear infinite;
+}
+
+.load-circle-bg{
+    width: 22rem;
+    position: absolute;
+    top: 5.5rem;
+    z-index: 0;
+    left: 50%;
+    margin-left: -11rem;
+}
+
+.load-word{
+    color:#fff;
+    font-size: 1.33rem;
+    text-align: center;
+    margin-top: 2rem;
+    text-shadow:0 0 5px #3541b3;
+}
+
+@keyframes load {
+    25% {
+        transform:rotate(-90deg);
+    }
+    50% {
+        transform:rotate(-180deg);
+    }
+    75% {
+        transform:rotate(-270deg);
+    }
+    100% {
+        transform:rotate(-360deg);
+    }
+}
+
+/*############  loading end #########*/
+/*############  大背景 statrt #########*/
+.content{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/1.png);
+    background-size: 100% 100%;
+    position: relative;
+    text-align: center;
+    display: none;
+}
+
+/*############  大背景 end #########*/
+/*############  主题 start #########*/
+.valentine{
+    display: none;
+}
+.valentine-title{
+    position: relative;
+    text-align: right;
+    padding-top: 7rem;
+}
+
+.cloud{
+    position: absolute;
+    top: 9rem;
+    left: 6rem;
+    width: 5rem;
+    animation: cloud 6s  linear infinite;
+}
+
+@keyframes cloud{
+    0%{
+        transform: translateX(30px);
+    }
+    25%{
+        transform: translateX(60px);
+    }
+    50%{
+        transform: translateX(90px);
+    }
+    75%{
+        transform: translateX(60px);
+    }
+    100%{
+        transform: translateX(30px);
+    }
+}
+
+.qixi{
+    width: 27rem;
+}
+
+/*指纹*/
+.fingerpint{
+    position: absolute;
+    left: 50%;
+    margin-left: -5rem;
+    margin-top: -1.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+.finger-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: finger 2s  linear infinite;
+    opacity: 0;
+}
+
+@keyframes finger {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+.fingerpint .finger-img{
+    position: absolute;
+    /*top: 0.5rem;*/
+    /*left: 0.5rem;*/
+    width: 13rem;
+    height: 13rem;
+    top:50%;
+    left: 50%;
+    margin-left: -6.5rem;
+    margin-top: -6.5rem;
+
+}
+
+.fingerpint .finger-line{
+    position: absolute;
+    top: 4rem;
+    width: 9rem;
+    left: 50%;
+    margin-left: -4.5rem;
+}
+
+.fingerpint .finger-line2{
+    top: 0rem;
+    animation: line 3s  linear infinite;
+}
+
+
+@keyframes line {
+    0% {
+        transform:translateY(1rem);
+    }
+    10% {
+        transform:translateY(2rem);
+    }
+    20% {
+        transform:translateY(3rem);
+    }
+    30% {
+        transform:translateY(4rem);
+    }
+    40% {
+        transform:translateY(5rem);
+    }
+    50% {
+        transform:translateY(7rem);
+    }
+    60% {
+        transform:translateY(5rem);
+    }
+    70% {
+        transform:translateY(4rem);
+    }
+    80% {
+        transform:translateY(3rem);
+    }
+    90% {
+        transform:translateY(2rem);
+    }
+    100% {
+        transform:translateY(1rem);
+    }
+
+}
+/*############  主题 end #########*/
+/*############  性别 start #########*/
+.sex-selection{
+    padding-top: 6rem;
+    display: none;
+}
+
+.sex-sel{
+    width: 18rem;
+}
+
+.sex-bg{
+    width: 13rem;
+}
+
+.sex-man{
+    position: relative;
+    display: inline-block;
+}
+
+.sex-ct{
+    display: inline-block;
+    width: 14rem;
+    height: 14rem;
+    background-color: transparent;
+}
+
+.sex-ct .se-bg-bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.sex-selected .sex-ct .se-bg-bg{
+    display: inline-block;
+    animation: brain 2s  linear infinite;
+}
+
+@keyframes brain {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes chi1 {
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.sex-man .img-boy{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10rem;
+    margin-left: -5rem;
+    margin-top: -5.5rem;
+}
+
+.sex-man:nth-of-type(2){
+    margin-top: -2.5rem;
+}
+
+.mofaM{
+    width: 12.3rem;
+    position: absolute;
+    right: 0;
+    top: 19.5rem;
+}
+
+.sex-btn{
+    width: 13rem;
+    margin-top: 2.4rem;
+}
+
+/*############  性别 end #########*/
+/*############  上传图片 start #########*/
+.upload-img{
+    position: relative;
+    display: none;
+}
+
+.upload-box{
+    display: inline-block;
+    margin-top: 9rem;
+    position: relative;
+}
+
+.upload-box .up-pic{
+    position: absolute;
+    width: 15.4rem;
+    height: 15.4rem;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-left: -7.7rem;
+    margin-top: -7rem;
+    z-index: 5;
+    display: none;
+}
+
+.pic-line{
+    display: inline-block;
+    width: 16rem; /*17*/
+    height: 5px;
+    background-color: #AAB9FF;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #6B75FE;
+    position: absolute;
+    top: 4rem; /*4*/
+    left: 50%;
+    margin-left: -8rem; /*8.5*/
+    z-index:8 ;
+    display: none;
+    animation: pic 2s linear infinite;
+}
+
+
+@keyframes pic {
+    25% {
+        transform:translateY(4rem);
+    }
+    50% {
+        transform:translateY(8rem);
+    }
+    75% {
+        transform:translateY(12rem);
+    }
+    100% {
+        transform:translateY(16rem);
+    }
+}
+
+.word-point2{
+    display: inline-block;
+    animation: point 2s linear infinite;
+}
+
+.upload-words2:nth-of-type(2){
+    margin-bottom: 0.5rem;
+}
+
+
+@keyframes point {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.upload-box input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    opacity: 0;
+}
+
+.upload-box img{
+    width: 20rem;
+}
+
+.shuzhi{
+    width: 10rem;
+    position: absolute;
+    right: 0;
+    top: 19.5rem;
+}
+
+.touying{
+    width: 14rem;
+    position: absolute;
+    right: 5.5rem;
+    top: 17.5rem;
+    animation: touying 2s linear infinite;
+}
+
+
+@keyframes touying {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.upload-words{
+    font-size: 1.3rem;
+    color:#fff;
+    display: none;
+    position: absolute;
+    top: 30rem;
+    left: 50%;
+    margin-left: -5rem;
+}
+
+.upload-words1{
+    margin-left: -3rem;
+}
+
+.upload-words:nth-of-type(2){
+    margin-left: -5rem;
+}
+
+.upload-words:nth-of-type(3){
+    top: 32rem;
+    margin-left: -7rem;
+}
+
+.upload-button{
+    margin-top: 10rem;
+}
+
+.upload-button button{
+    background-color: transparent;
+}
+
+.upload-button button img{
+    width: 12.3rem;
+}
+
+.upload-button1{
+
+}
+
+.upload-button2{
+    margin-top: 12rem;
+    display: none;
+}
+
+button.btn-reset{
+    position: relative;
+    left: -0.5rem;
+}
+
+button.btn-zhan{
+    position: relative;
+    right: -0.5rem;
+}
+
+/*############  上传图片 end #########*/
+/*############  最后 start #########*/
+.last-content{
+    padding-top: 2rem;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: -10;
+}
+
+.last-content1{
+    z-index: 0;
+}
+
+.last-word{
+    position: relative;
+    display: inline-block;
+}
+
+.last-word2{
+    display: none;
+}
+
+.last-word2>img{
+    width: 24rem;
+}
+
+.word-big-bg{
+    width: 24rem;
+}
+
+.user-img-bg{
+    width: 5rem;
+    height: 5rem;
+}
+
+.user-info{
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+
+.user-img{
+    display: inline-block;
+    position: relative;
+}
+
+.user-info>ul{
+    display: inline-block;
+    padding-top: 1rem;
+    vertical-align: top;
+    text-align: left;
+    padding-left: 0.5rem;
+}
+
+.user-name{
+    /*display: inline-block;*/
+    color:#fff;
+}
+
+.user-header-img{
+    width: 4.6rem;
+    height: 4.6rem;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-left: -2.3rem;
+    margin-top: -2.3rem;
+    border-radius: 50%;
+}
+
+.my-word{
+    position: absolute;
+    top: 10rem;
+    left: 1rem;
+}
+
+.my-word-info{
+    width: 22rem;
+    height: 12.2rem;
+    background-image: url(../img/word_bg.png);
+    background-size: 100% 100%;
+}
+
+.my-word-info img.word-width-16{
+    width: 16rem;
+    margin-top: 3rem;
+}
+
+
+
+.my-word-info img.word-width-12{
+    width: 12rem;
+    margin-top: 2.5rem;
+}
+
+.my-word-info img.word-width-14{
+    width: 14rem;
+    margin-top: 2.5rem;
+}
+
+.my-word-info img.word-width-15{
+    width: 15rem;
+    margin-top: 2.5rem;
+}
+
+.my-word-info img.word-width-18{
+    width: 18rem;
+    margin-top: 3rem;
+}
+
+.my-word-info img.word-width-21{
+    width: 18rem;
+    margin-top: 2.3rem;
+}
+
+.word-ewm{
+    width: 6rem;
+    height: 6rem;
+    background-image: url(../img/ewm_bg.png);
+    background-size: 100% 100% ;
+    position: absolute;
+    bottom: 3rem;
+    left: 2rem;
+}
+
+.word-ewm img{
+    width: 4.4rem;
+    height: 4.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.2rem;
+    margin-left: -2.2rem;
+}
+
+.word-ewm>p{
+    position: absolute;
+    bottom: -2rem;
+    color:#fff;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+.pic-tu{
+    margin-top: 1rem;
+}
+
+.pic-tu>img{
+    width: 21rem;
+}
+
+.reset-btn button{
+    background-color: transparent;
+}
+
+.reset-btn button img{
+    width: 13rem;
+}
+
+
+/*############  最后 end #########*/
