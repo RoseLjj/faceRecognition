@@ -127,19 +127,24 @@ var clearTime3;
 var flag_mus = 0; //音频
 
 $(function () {
+    var OpenId = getUrlParam('OpenId');
+    var NickName = getUrlParam('NickName');
+    var HeadImgURL = getUrlParam('HeadImgURL');
+    if(!isNullOrEmpty(HeadImgURL)){
+        getbase64(HeadImgURL);
+    }
+
     if(is_weixn()) {
         //微信授权
         //OpenId
-        var OpenId = getUrlParam('OpenId');
-        var NickName = getUrlParam('NickName');
-        var HeadImgURL = getUrlParam('HeadImgURL')
+
         if(isNullOrEmpty(OpenId) && isNullOrEmpty(NickName) && isNullOrEmpty(HeadImgURL)){//没有授权
             window.location.href = 'http://h5.flyfinger.com/360loophole/index';
         }else{
             NickName = decodeURI(NickName);
-            // getbase64(HeadImgURL);
-            $('.user-header-img').attr('src',HeadImgURL);
-            $('.user-header-img').attr('crossOrigin','Anonymous');
+            getbase64(HeadImgURL);
+            // $('.user-header-img').attr('src',HeadImgURL);
+            // $('.user-header-img').attr('crossOrigin','Anonymous');
             $('.user-name-info>span').text(NickName);
             $('.user-header-img').show();
             $('.user-name-info').show();
