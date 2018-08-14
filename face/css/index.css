@@ -133,7 +133,7 @@ html,body{
     position: absolute;
     left: 50%;
     margin-left: -5rem;
-    margin-top: -2.5rem;
+    margin-top: -3.5rem;
     width: 10rem;
     height: 10rem;
 }
@@ -626,15 +626,22 @@ button.btn-zhan{
 
 .my-word{
     position: absolute;
-    top: 10rem;
-    left: 1rem;
+    top: 8rem;
+    left: 50%;
+    width: 22rem;
+    margin-left: -11rem;
 }
 
 .my-word-info{
     width: 22rem;
-    height: 12.2rem;
-    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/word_bg.png);
-    background-size: 100% 100%;
+    /*height: 12.2rem;*/
+    /*background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/word_bg.png);*/
+    /*background-size: 100% 100%;*/
+}
+
+.my-word img{
+    width: 100%;
+    /*height: 100%;*/
 }
 
 .my-word-info img.word-width-16{

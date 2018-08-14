@@ -2,33 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6fd375b-2065-488b-9854-fd3590a1b9c9" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/man/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/man/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/man/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/man/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/man/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/man/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/save3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/save4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/woman/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/wuyuan2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/wuyuan3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/img/wuyuan4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/js/index2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/face/music/music_01.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/face/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/face/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/man/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/man/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/img/woman/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/face/img/woman/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/face/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/face/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/face/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/face/index2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/face/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/face/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2.html" beforeDir="false" afterPath="$PROJECT_DIR$/test2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/tinified (1).zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/tinified (1)/圆角矩形5@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/tinified (1)/微信图片_20180813193240.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/face/tinified (1)/请选择你的性别通道@3x.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,14 +60,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6108631">
+    <splitter split-orientation="horizontal" split-proportion="0.46056548">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
           <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/face/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+                <state relative-caret-position="332">
+                  <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
                   <folding>
                     <element signature="n#style#0;n#audio#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -72,7 +91,7 @@
             <entry file="file://$PROJECT_DIR$/face/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="12012">
-                  <caret line="573" column="41" lean-forward="true" selection-start-line="573" selection-start-column="41" selection-end-line="573" selection-end-column="41" />
+                  <caret line="591" column="41" selection-start-line="591" selection-start-column="41" selection-end-line="591" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -86,7 +105,7 @@
             <entry file="file://$PROJECT_DIR$/test2.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="2142">
-                  <caret line="102" column="34" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="34" />
+                  <caret line="102" column="34" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="34" />
                 </state>
               </provider>
             </entry>
@@ -95,11 +114,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/face/js/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="227">
-                  <caret line="388" column="47" selection-start-line="388" selection-start-column="35" selection-end-line="388" selection-end-column="47" />
+                <state relative-caret-position="155">
+                  <caret line="456" column="27" selection-start-line="456" selection-start-column="27" selection-end-line="456" selection-end-column="27" />
                   <folding>
                     <element signature="e#787#2185#0" />
                     <element signature="e#2205#3785#0" />
@@ -109,11 +128,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/face/css/index.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="2644">
-                  <caret line="261" column="17" lean-forward="true" selection-start-line="261" selection-start-column="17" selection-end-line="261" selection-end-column="17" />
+                <state relative-caret-position="321">
+                  <caret line="643" column="21" lean-forward="true" selection-start-line="643" selection-start-column="21" selection-end-line="643" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
@@ -133,7 +152,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>wenben</find>
-      <find>style=&quot;opacity: 0&quot;</find>
+      <find />
       <find>word-width-21</find>
       <find>-10</find>
       <find>isN</find>
@@ -161,8 +180,8 @@
         <option value="$PROJECT_DIR$/sao.html" />
         <option value="$PROJECT_DIR$/test2.html" />
         <option value="$PROJECT_DIR$/face/index2.html" />
-        <option value="$PROJECT_DIR$/face/js/index.js" />
         <option value="$PROJECT_DIR$/face/css/index.css" />
+        <option value="$PROJECT_DIR$/face/js/index.js" />
         <option value="$PROJECT_DIR$/face/index.html" />
       </list>
     </option>
@@ -271,12 +290,12 @@
       <workItem from="1534125012673" duration="30000" />
       <workItem from="1534125088865" duration="23753000" />
       <workItem from="1534208555165" duration="12623000" />
-      <workItem from="1534251165615" duration="1962000" />
+      <workItem from="1534251165615" duration="5937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82062000" />
+    <option name="totallyTimeSpent" value="86037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -486,7 +505,7 @@
     <entry file="file://$PROJECT_DIR$/test2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2142">
-          <caret line="102" column="34" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="34" />
+          <caret line="102" column="34" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -500,24 +519,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/face/js/index.js">
+    <entry file="file://$PROJECT_DIR$/face/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12012">
-          <caret line="573" column="41" lean-forward="true" selection-start-line="573" selection-start-column="41" selection-end-line="573" selection-end-column="41" />
+        <state relative-caret-position="321">
+          <caret line="643" column="21" lean-forward="true" selection-start-line="643" selection-start-column="21" selection-end-line="643" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/face/css/index.css">
+    <entry file="file://$PROJECT_DIR$/face/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2644">
-          <caret line="261" column="17" lean-forward="true" selection-start-line="261" selection-start-column="17" selection-end-line="261" selection-end-column="17" />
+        <state relative-caret-position="12012">
+          <caret line="591" column="41" selection-start-line="591" selection-start-column="41" selection-end-line="591" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/face/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="25" column="56" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+        <state relative-caret-position="332">
+          <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
           <folding>
             <element signature="n#style#0;n#audio#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
