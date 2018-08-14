@@ -148,7 +148,6 @@ $(function () {
             $('.user-name-info>span').text(NickName);
             $('.user-header-img').show();
             $('.user-name-info').show();
-            $('.user-love').text('的爱情运势');
         }
         share();//微信分享
         //音频播放
@@ -161,8 +160,7 @@ $(function () {
         }, false);
     }else{
         $('.user-header-img').hide();
-        $('.user-name-info').hide();
-        $('.user-love').text('爱情运势');
+        // $('.user-name-info').hide();
 
        /* $('body').one('touchstart', function () {
             if(flag_mus == 0) {
@@ -248,7 +246,7 @@ function share() {
     //    });
     //如要在中途重置分享到朋友圈，调用setTimeLineOptions方法：
     _wx_share.setTimeLineOptions({
-        'title':"朋友圈title重置"
+        'title':"人工智能占卜你的七夕爱情运势，还不快来测测看"
     });
 }
 
@@ -346,6 +344,7 @@ function goCampture(){
     $('.content>div.upload-img .upload-button1').show();
     $('.content>div.upload-img .upload-button2').hide();
 
+    $('.up-pic').attr('status',0);
     $('.content>div').slideUp();
     $('.content>div.upload-img').slideDown();
 }
@@ -355,10 +354,12 @@ function goCampture(){
  * 上传图片
  * @param that
  */
+var files = '';
 function uploadImg(that) {
     var status = 0;
 
     var file = that.files[0];
+    files = file;
     var r = new FileReader();
     r.readAsDataURL(file);
     setTimeout(function () {
@@ -377,9 +378,8 @@ function uploadImg(that) {
     })
 }
 
-
 function tryIt() {
-
+    $('#uploadImg').attr('onchange','');
     var status = $('.up-pic').attr('status');
     if(status == 0){
         alert("请上传照片");
@@ -395,7 +395,7 @@ function tryIt() {
         $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
     }else{
         var random = Math.ceil(Math.random() * womanImgArr.length);
-        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
     }
     $('.last-content').show();
 
@@ -405,8 +405,6 @@ function tryIt() {
 
 
     var flag = 0;
-
-
     clearTime3 = setInterval(function () {
         if(flag == 1){
             alert('没有检测到图片中的人像');
@@ -415,7 +413,7 @@ function tryIt() {
         if(flag == 2){
             scanOver(1);
         }
-    },4000)
+    },1500)
     $('.up-pic').faceDetection({
         complete: function (faces) {
             console.log(faces);
@@ -448,6 +446,80 @@ function tryIt() {
     });
 }
 
+
+function tryIt2() {
+    $('#uploadImg').attr('onchange','');
+    var status = $('.up-pic').attr('status');
+    if(status == 0){
+        alert("请上传照片");
+        return;
+    }
+    // bLine()
+
+    $('.last-content').removeClass('last-content1');
+    $('.last-word ').hide();
+    $('.last-word1 ').show();
+    if($('.sex-selected').attr('type') == 1 ){//男
+        var random = Math.ceil(Math.random() * manImgArr.length);
+        $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+    }else{
+        var random = Math.ceil(Math.random() * womanImgArr.length);
+        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+    }
+    $('.last-content').show();
+
+    setTimeout(function () {
+        // zhongPic()
+    },1000)
+
+
+    var flag = 0;
+    clearTime3 = setInterval(function () {
+        if(flag == 1){
+            alert('没有检测到图片中的人像');
+            scanOver(2);
+        }
+        if(flag == 2){
+            scanOver(1);
+        }
+    },1500)
+
+
+    var data = new FormData();
+    data.append('image', files);
+    $.ajax({
+        type: "POST",
+        url: "https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect",
+        data: data,
+        cache: false,
+        dataType: 'json',
+        contentType: false,
+        withCredentials: false,
+        processData: false,
+        beforeSend: function (xhr) {
+            xhr.setRequestHeader("Authorization", "Basic QWxhZGRpbjpPcGVuU2VzYW1l");
+        },
+        success: function (data) {
+            if(!isNullOrEmpty(data.box) && data.box.length>0 ){//有人头
+                flag = 2;
+            }else{
+                flag = 1;
+            }
+        },
+        error:function (data) {
+            alert(data);
+            flag = 3;
+            scanOver(2);
+        },
+        complete: function (XMLHttpRequest,status) {
+            if(status == 'timeout') {
+                xhr.abort();    // 超时后中断请求
+                alert("网络超时，请重新测试")
+            }
+        }
+    });
+}
+
 function bLine(){
     var status = $('.up-pic').attr('status');
     if(isNullOrEmpty(status) || status == 0){
@@ -467,12 +539,14 @@ function bLine(){
 function scanOver(type){
     if(type ==1){//有人
         $('.pic-line').hide();
-        $('.upload-button1').hide();
-        $('.upload-button2').show();
+        goDivination()
+       /* $('.upload-button1').hide();
+        $('.upload-button2').show();*/
     }else{
         $('.pic-line').hide();
     }
     $('.upload-words').hide();
+    $('#uploadImg').attr('onchange','uploadImg(this)');
     clearInterval(clearTime3);
 }
 /*
@@ -492,6 +566,8 @@ function goDivination2(){
  * 去占卜
  */
 function goDivination(){
+    document.getElementById('musicfx').pause();
+    document.getElementById('musicfx').play();
     $('.content>div').hide();
     $('.content>div.last-content').show();
     $('.last-content').addClass('last-content1')

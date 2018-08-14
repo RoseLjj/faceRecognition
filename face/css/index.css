@@ -368,7 +368,7 @@ html,body{
     margin-left: -8rem; /*8.5*/
     z-index:8 ;
     display: none;
-    animation: pic 2s linear infinite;
+    animation: pic 1.5s linear infinite;
 }
 
 
@@ -531,6 +531,16 @@ button.btn-zhan{
     z-index: 0;
 }
 
+.wenben{
+    position: absolute;
+    color:#fff;
+    /*width: 9rem;*/
+    font-size: 1.5rem;
+    right: 1rem;
+    top: 1rem;
+    font-family: "楷体";
+}
+
 .last-word{
     position: relative;
     display: inline-block;
@@ -580,6 +590,11 @@ button.btn-zhan{
 .user-name{
     /*display: inline-block;*/
     color:#fff;
+}
+
+.user-name-info{
+    display: inline-block;
+    /*width: 6rem;*/
 }
 
 .user-header-img{
@@ -639,8 +654,8 @@ button.btn-zhan{
 }
 
 .word-ewm{
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
     background-image: url(../img/yuan.png);
     background-size: 100% 100% ;
     position: absolute;
@@ -649,21 +664,24 @@ button.btn-zhan{
 }
 
 .word-ewm img{
-    width: 4.4rem;
-    height: 4.4rem;
+    width: 5.4rem;
+    height: 5.4rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -2.2rem;
-    margin-left: -2.2rem;
+    margin-top: -2.7rem;
+    margin-left: -2.7rem;
 }
 
 .word-ewm>p{
     position: absolute;
+    left: 50%;
+    min-width: 10rem;
     bottom: -2rem;
     color:#fff;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
+    margin-left: -5rem;
 }
 
 .pic-tu{
