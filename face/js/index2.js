@@ -16,8 +16,8 @@ new function() {
 
 };
 
-var imgurl = 'http://h5.flyfinger.com/2018/O/os/face/img/man/';
-var imgurl2 = 'http://h5.flyfinger.com/2018/O/os/face/img/woman/';
+var imgurl = './img/man/';
+var imgurl2 = './img/woman/';
 var manImgArr = [
     {
         classname:'word-width-18',
@@ -67,35 +67,11 @@ var manImgArr = [
         classname:'word-width-16',
         url: imgurl+'12.png',
     },
-    {
-        classname:'word-width-14',
-        url: imgurl+'13.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl+'14.png',
-    },
-    {
-        classname:'word-width-16',
-        url: imgurl+'15.png',
-    },
-    {
-        classname:'word-width-16',
-        url: imgurl+'16.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl+'17.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl+'18.png',
-    },
 ]
 
 var womanImgArr = [
     {
-        classname:'word-width-14',
+        classname:'word-width-12',
         url: imgurl2+'1.png',
     },
     {
@@ -142,38 +118,6 @@ var womanImgArr = [
         classname:'word-width-18',
         url: imgurl2+'12.png',
     },
-    {
-        classname:'word-width-15-2',
-        url: imgurl2+'13.png',
-    },
-    {
-        classname:'word-width-16-4',
-        url: imgurl2+'14.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl2+'15.png',
-    },
-    {
-        classname:'word-width-16-4',
-        url: imgurl2+'16.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl2+'17.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl2+'18.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl2+'19.png',
-    },
-    {
-        classname:'word-width-14',
-        url: imgurl2+'20.png',
-    },
 ]
 
 var load = 0;
@@ -204,6 +148,7 @@ $(function () {
             $('.user-name-info>span').text(NickName);
             $('.user-header-img').show();
             $('.user-name-info').show();
+            $('.user-love').text('的爱情运势');
         }
         share();//微信分享
         //音频播放
@@ -216,14 +161,15 @@ $(function () {
         }, false);
     }else{
         $('.user-header-img').hide();
-        // $('.user-name-info').hide();
+        $('.user-name-info').hide();
+        $('.user-love').text('爱情运势');
 
-        /* $('body').one('touchstart', function () {
-             if(flag_mus == 0) {
-                 document.getElementById('musicfx').play();
-                 flag_mus = 1;
-             }
-         })*/
+       /* $('body').one('touchstart', function () {
+            if(flag_mus == 0) {
+                document.getElementById('musicfx').play();
+                flag_mus = 1;
+            }
+        })*/
 
         setInterval(function () {
             document.getElementById('musicfx').play();
@@ -302,7 +248,7 @@ function share() {
     //    });
     //如要在中途重置分享到朋友圈，调用setTimeLineOptions方法：
     _wx_share.setTimeLineOptions({
-        'title':"人工智能占卜你的七夕爱情运势，还不快来测测看"
+        'title':"朋友圈title重置"
     });
 }
 
@@ -337,7 +283,7 @@ function loading() {
                 $('.content>div').hide();
                 $('.load-page').slideUp();
                 $('.finger-line').removeClass('finger-line2')
-                $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+                $('.finger-img').attr('src','./img/finger_01.png')
 
                 $('.content>div.valentine').show();
                 $('.content').slideDown();
@@ -355,7 +301,7 @@ function pressFinger(){
     $(".fingerpint").on({
         touchstart: function(e){
             $('.finger-line').addClass('finger-line2')
-            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_02.png')
+            $('.finger-img').attr('src','./img/finger_02.png')
             timeOutEvent = setTimeout(function(){
                 //此处为长按事件-----在此显示遮罩层及删除按钮
                 $('.content>div').slideUp();
@@ -370,7 +316,7 @@ function pressFinger(){
         touchend: function(e){
             clearTimeout(timeOutEvent);
             $('.finger-line').removeClass('finger-line2')
-            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+            $('.finger-img').attr('src','./img/finger_01.png')
             if(timeOutEvent!=0){//点击
                 console.log('点击');
 
@@ -388,7 +334,6 @@ function toggleSex(){
     $('.sex-boy button').on('touchstart',function () {
         $('.sex-boy').removeClass('sex-selected');
         $(this).parent().addClass('sex-selected');
-        goCampture();
     })
 }
 
@@ -401,7 +346,6 @@ function goCampture(){
     $('.content>div.upload-img .upload-button1').show();
     $('.content>div.upload-img .upload-button2').hide();
 
-    $('.up-pic').attr('status',0);
     $('.content>div').slideUp();
     $('.content>div.upload-img').slideDown();
 }
@@ -411,12 +355,10 @@ function goCampture(){
  * 上传图片
  * @param that
  */
-var files = '';
 function uploadImg(that) {
     var status = 0;
 
     var file = that.files[0];
-    files = file;
     var r = new FileReader();
     r.readAsDataURL(file);
     setTimeout(function () {
@@ -435,8 +377,9 @@ function uploadImg(that) {
     })
 }
 
-function tryIt2() {
-    $('#uploadImg').attr('onchange','');
+
+function tryIt() {
+
     var status = $('.up-pic').attr('status');
     if(status == 0){
         alert("请上传照片");
@@ -452,7 +395,7 @@ function tryIt2() {
         $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
     }else{
         var random = Math.ceil(Math.random() * womanImgArr.length);
-        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
     }
     $('.last-content').show();
 
@@ -462,6 +405,8 @@ function tryIt2() {
 
 
     var flag = 0;
+
+
     clearTime3 = setInterval(function () {
         if(flag == 1){
             alert('没有检测到图片中的人像');
@@ -470,7 +415,7 @@ function tryIt2() {
         if(flag == 2){
             scanOver(1);
         }
-    },1500)
+    },4000)
     $('.up-pic').faceDetection({
         complete: function (faces) {
             console.log(faces);
@@ -503,81 +448,6 @@ function tryIt2() {
     });
 }
 
-
-function tryIt() {
-    $('#uploadImg').attr('onchange','');
-    var status = $('.up-pic').attr('status');
-    if(status == 0){
-        alert("请上传照片");
-        return;
-    }
-    // bLine()
-
-    $('.last-content').removeClass('last-content1');
-    $('.last-word ').hide();
-    $('.last-word1 ').show();
-    if($('.sex-selected').attr('type') == 1 ){//男
-        var random = Math.ceil(Math.random() * manImgArr.length);
-        $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
-    }else{
-        var random = Math.ceil(Math.random() * womanImgArr.length);
-        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
-    }
-    $('.last-content').show();
-
-    setTimeout(function () {
-        // zhongPic()
-    },1000)
-
-
-    var flag = 0;
-    clearTime3 = setInterval(function () {
-        if(flag == 1){
-            alert('没有检测到图片中的人像');
-            scanOver(2);
-        }
-        if(flag == 2){
-            scanOver(1);
-        }
-    },1500)
-
-
-    var data = new FormData();
-    data.append('image', files);
-    $.ajax({
-        type: "POST",
-        url: "https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect",
-        data: data,
-        cache: false,
-        dataType: 'json',
-        contentType: false,
-        withCredentials: false,
-        processData: false,
-        beforeSend: function (xhr) {
-            xhr.setRequestHeader("Authorization", "Basic QWxhZGRpbjpPcGVuU2VzYW1l");
-        },
-        success: function (data) {
-            if(!isNullOrEmpty(data.box) && data.box.length>0 ){//有人头
-                flag = 2;
-            }else{
-                flag = 1;
-            }
-        },
-        error:function (data) {
-            alert(data);
-            flag = 3;
-            scanOver(2);
-        },
-        complete: function (XMLHttpRequest,status) {
-            if(status == 'timeout') {
-                xhr.abort();    // 超时后中断请求
-                clearInterval(clearTime3);
-                alert("网络超时，请重新测试")
-            }
-        }
-    });
-}
-
 function bLine(){
     var status = $('.up-pic').attr('status');
     if(isNullOrEmpty(status) || status == 0){
@@ -597,14 +467,12 @@ function bLine(){
 function scanOver(type){
     if(type ==1){//有人
         $('.pic-line').hide();
-        goDivination()
-        /* $('.upload-button1').hide();
-         $('.upload-button2').show();*/
+        $('.upload-button1').hide();
+        $('.upload-button2').show();
     }else{
         $('.pic-line').hide();
     }
     $('.upload-words').hide();
-    $('#uploadImg').attr('onchange','uploadImg(this)');
     clearInterval(clearTime3);
 }
 /*
@@ -624,8 +492,6 @@ function goDivination2(){
  * 去占卜
  */
 function goDivination(){
-    document.getElementById('musicfx').pause();
-    document.getElementById('musicfx').play();
     $('.content>div').hide();
     $('.content>div.last-content').show();
     $('.last-content').addClass('last-content1')
@@ -678,7 +544,7 @@ function zhongPic() {
             if (dataUrl == 'data:,') {
                 zhongPic();
             } else {
-                $('.last-word2 img').attr('src',dataUrl)
+               $('.last-word2 img').attr('src',dataUrl)
             }
         }
     });

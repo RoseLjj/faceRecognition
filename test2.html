@@ -36,6 +36,81 @@
             }).show();
         })
 
+        var flag = 0;
+        clearTime3 = setInterval(function () {
+            if(flag == 1){
+                alert('没有检测到图片中的人像');
+                scanOver(2);
+            }
+            if(flag == 2){
+                scanOver(1);
+            }
+        },1500)
+
+
+        var data = new FormData();
+        data.append('image', file);
+        $.ajax({
+            type: "POST",
+            url: "https://ai.r.addops.soft.360.cn/rest/1.0/image/face-detection/detect",
+            data: data,
+            cache: false,
+            dataType: 'json',
+            contentType: false,
+            withCredentials: false,
+            processData: false,
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader("Authorization", "Basic QWxhZGRpbjpPcGVuU2VzYW1l");
+            },
+            success: function (data) {
+                if(!isNullOrEmpty(data.box) && data.box.length>0 ){//有人头
+                    flag = 2;
+                }else{
+                    flag = 1;
+                }
+            },
+            error:function (data) {
+                alert(data);
+                flag = 3;
+                scanOver(2);
+            },
+            complete: function (XMLHttpRequest,status) {
+                if(status == 'timeout') {
+                    xhr.abort();    // 超时后中断请求
+                    alert("网络超时，请重新测试")
+                }
+            }
+        });
+    }
+    /**
+     * 判断是否为空
+     * @param strVal
+     * @returns {boolean}
+     */
+    function isNullOrEmpty(strVal) {
+        if (strVal == '' || strVal == null || strVal == undefined) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    /**
+     * 扫描完成
+     * @param type 1:有人物,2,无人或错误
+     */
+    function scanOver(type){
+        console.log(type);
+        clearInterval(clearTime3);
+    }
+    function uploadImg2(file) {
+        var r = new FileReader();
+        r.readAsDataURL(file);
+        $(r).load(function () {
+            $('#img').attr({
+                'src': this.result,
+            }).show();
+        })
+
         var data = new FormData();
         data.append('image', file);
         $.ajax({
