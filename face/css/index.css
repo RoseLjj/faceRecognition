@@ -1,4 +1,4 @@
-
+@charset "utf-8";
 html,body{
     width: 100%;
     height: 100%;
@@ -76,7 +76,7 @@ html,body{
 }
 
 /*############  loading end #########*/
-/*############  大背景 statrt #########*/
+/*############  主题背景 statrt #########*/
 .content{
     width: 100%;
     height: 100%;
@@ -87,8 +87,8 @@ html,body{
     display: none;
 }
 
-/*############  大背景 end #########*/
-/*############  主题 start #########*/
+/*############  主题背景 end #########*/
+/*############  主题文本 start #########*/
 .valentine{
     display: none;
 }
@@ -128,7 +128,7 @@ html,body{
     width: 27rem;
 }
 
-/*指纹*/
+/*æŒ‡çº¹*/
 .fingerpint{
     position: absolute;
     left: 50%;
@@ -231,8 +231,8 @@ html,body{
     }
 
 }
-/*############  主题 end #########*/
-/*############  性别 start #########*/
+/*############  主题文本 end #########*/
+/*############  æ€§åˆ« start #########*/
 .sex-selection{
     padding-top: 6rem;
     display: none;
@@ -329,7 +329,7 @@ html,body{
     margin-top: 2.4rem;
 }
 
-/*############  性别 end #########*/
+/*############  选择性别 end #########*/
 /*############  上传图片 start #########*/
 .upload-img{
     position: relative;
@@ -368,7 +368,7 @@ html,body{
     margin-left: -8rem; /*8.5*/
     z-index:8 ;
     display: none;
-    animation: pic 2s linear infinite;
+    animation: pic 1.5s linear infinite;
 }
 
 
@@ -531,6 +531,16 @@ button.btn-zhan{
     z-index: 0;
 }
 
+.wenben{
+    position: absolute;
+    color:#5d51bb;
+    /*width: 9rem;*/
+    font-size: 1.5rem;
+    right: 1rem;
+    top: 1rem;
+    font-family: "KaiTi";
+}
+
 .last-word{
     position: relative;
     display: inline-block;
@@ -582,6 +592,11 @@ button.btn-zhan{
     color:#fff;
 }
 
+.user-name-info{
+    display: inline-block;
+    /*width: 6rem;*/
+}
+
 .user-header-img{
     width: 4.6rem;
     height: 4.6rem;
@@ -602,13 +617,18 @@ button.btn-zhan{
 .my-word-info{
     width: 22rem;
     height: 12.2rem;
-    background-image: url(../img/word_bg.png);
+    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/word_bg.png);
     background-size: 100% 100%;
 }
 
 .my-word-info img.word-width-16{
     width: 16rem;
     margin-top: 3rem;
+}
+
+.my-word-info img.word-width-16-4{
+    width: 16rem;
+    margin-top: 4rem;
 }
 
 
@@ -628,6 +648,11 @@ button.btn-zhan{
     margin-top: 2.5rem;
 }
 
+.my-word-info img.word-width-15-2{
+    width: 15rem;
+    margin-top: 3rem;
+}
+
 .my-word-info img.word-width-18{
     width: 18rem;
     margin-top: 3rem;
@@ -639,9 +664,9 @@ button.btn-zhan{
 }
 
 .word-ewm{
-    width: 6rem;
-    height: 6rem;
-    background-image: url(../img/yuan.png);
+    width: 7rem;
+    height: 7rem;
+    background-image: url(http://h5.flyfinger.com/2018/O/os/face/img/yuan.png);
     background-size: 100% 100% ;
     position: absolute;
     bottom: 3rem;
@@ -649,21 +674,24 @@ button.btn-zhan{
 }
 
 .word-ewm img{
-    width: 4.4rem;
-    height: 4.4rem;
+    width: 5.4rem;
+    height: 5.4rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -2.2rem;
-    margin-left: -2.2rem;
+    margin-top: -2.7rem;
+    margin-left: -2.7rem;
 }
 
 .word-ewm>p{
     position: absolute;
+    left: 50%;
+    min-width: 10rem;
     bottom: -2rem;
     color:#fff;
-    font-size: 0.6rem;
+    font-size: 0.9rem;
     text-align: center;
+    margin-left: -5rem;
 }
 
 .pic-tu{
@@ -671,7 +699,7 @@ button.btn-zhan{
 }
 
 .pic-tu>img{
-    width: 21rem;
+    width: 24rem;
 }
 
 .reset-btn button{
@@ -692,7 +720,7 @@ button.btn-zhan{
     .pic-tu{
         margin-top: 2rem;
     }/*
-    !*如果以后出现375*812,非ios机型，可以加上下面语句*!
+    !*å¦‚æžœä»¥åŽå‡ºçŽ°375*812,éžiosæœºåž‹ï¼Œå¯ä»¥åŠ ä¸Šä¸‹é¢è¯­å¥*!
     @supports (bottom: constant(safe-area-inset-bottom)) {
         .last-content{
             padding-top: 4rem;
