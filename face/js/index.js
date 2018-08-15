@@ -16,8 +16,10 @@ new function() {
 
 };
 
-var imgurl = 'http://h5.flyfinger.com/2018/O/os/face/img/man/';
-var imgurl2 = 'http://h5.flyfinger.com/2018/O/os/face/img/woman/';
+var imgurl = 'http://h5.flyfinger.com/2018/O/os/face/img/boy/';
+var imgurl2 = 'http://h5.flyfinger.com/2018/O/os/face/img/girl/';
+var womanLength = 16; //男文案数量
+var manLength = 15; //女文案数量
 var manImgArr = [
     {
         classname:'word-width-18',
@@ -231,8 +233,6 @@ $(function () {
         },10)
     }
 
-
-
     loading(); //加载
     pressFinger(); //长按指纹
     toggleSex();//切换性别
@@ -272,7 +272,7 @@ function share() {
     var options = {
         'id':"七夕爱情运势", //项目名
         'title':'你的好友被测出是百年一见的独孤星人，你也试试？',
-        'desc':'人工智能占卜你的七夕爱情运势，还不快来测测看',
+        'desc':'看颜值测运势，是好是坏就靠脸啦!',
         'link':"http://h5.flyfinger.com/2018/O/os/face/index.html",
         'imgUrl':"http://h5.flyfinger.com/2018/O/os/face/img/share.jpg",
         //        'type':'分享类型,music、video或link，不填默认为link',
@@ -302,7 +302,7 @@ function share() {
     //    });
     //如要在中途重置分享到朋友圈，调用setTimeLineOptions方法：
     _wx_share.setTimeLineOptions({
-        'title':"人工智能占卜你的七夕爱情运势，还不快来测测看"
+        'title':"你的好友被测出是百年一见的独孤星人，你也试试？"
     });
 }
 
@@ -448,22 +448,7 @@ function tryIt2() {
     $('.last-content').removeClass('last-content1');
     $('.last-word ').hide();
     $('.last-word1 ').show();
-    if($('.sex-selected').attr('type') == 1 ){//男
-        // var length1 = manImgArr.length;
-        var length1 = 12;
-
-        var random = Math.ceil(Math.random() * length1 );
-        var url = imgurl + random + '.png';
-        // $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
-        $('.my-word img').attr('src',url);
-    }else{
-        // var length1 = womanImgArr.length;
-        var length2 = 12;
-        var random = Math.ceil(Math.random() * length2 );
-        var url = imgurl2 + random + '.png';
-        // $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
-        $('.my-word img').attr('src',url);
-    }
+    getOneRandomPic()
     $('.last-content').show();
 
     setTimeout(function () {
@@ -513,6 +498,23 @@ function tryIt2() {
     });
 }
 
+/**
+ * 随机文案
+ */
+function getOneRandomPic(){
+    if($('.sex-selected').attr('type') == 1 ){//男
+        var random = Math.ceil(Math.random() * manLength );
+        var url = imgurl + random + '.png';
+        // $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+        $('.my-word img').attr('src',url);
+    }else{
+        var random = Math.ceil(Math.random() * womanLength );
+        var url = imgurl2 + random + '.png';
+        // $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+        $('.my-word img').attr('src',url);
+    }
+}
+
 function tryIt() {
     $('#uploadImg').attr('onchange','');
     var status = $('.up-pic').attr('status');
@@ -520,27 +522,13 @@ function tryIt() {
         alert("请上传照片");
         return;
     }
+    $('.btn-start').attr('onclick','');
     // bLine()
 
     $('.last-content').removeClass('last-content1');
     $('.last-word ').hide();
     $('.last-word1 ').show();
-    if($('.sex-selected').attr('type') == 1 ){//男
-        // var length1 = manImgArr.length;
-        var length1 = 12;
-
-        var random = Math.ceil(Math.random() * length1 );
-        var url = imgurl + random + '.png';
-        // $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
-        $('.my-word img').attr('src',url);
-    }else{
-        // var length1 = womanImgArr.length;
-        var length2 = 12;
-        var random = Math.ceil(Math.random() * length2 );
-        var url = imgurl2 + random + '.png';
-        // $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
-        $('.my-word img').attr('src',url);
-    }
+    getOneRandomPic()
     $('.last-content').show();
 
     setTimeout(function () {
@@ -590,7 +578,8 @@ function tryIt() {
             if(status == 'timeout') {
                 xhr.abort();    // 超时后中断请求
                 clearInterval(clearTime3);
-                alert("网络超时，请重新测试")
+                $('.btn-start').attr('onclick','tryIt()');
+                alert("网络超时，请重新测试");
             }
         }
     });
@@ -623,6 +612,7 @@ function scanOver(type){
     }
     $('.upload-words').hide();
     $('#uploadImg').attr('onchange','uploadImg(this)');
+    $('.btn-start').attr('onclick','tryIt()');
     clearInterval(clearTime3);
 }
 /*
