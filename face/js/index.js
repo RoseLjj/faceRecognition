@@ -352,6 +352,7 @@ function loading() {
  * 按指纹
  */
 function pressFinger(){
+    var timeOutEvent;
     $(".fingerpint").on({
         touchstart: function(e){
             $('.finger-line').addClass('finger-line2')
@@ -388,6 +389,7 @@ function toggleSex(){
     $('.sex-boy button').on('touchstart',function () {
         $('.sex-boy').removeClass('sex-selected');
         $(this).parent().addClass('sex-selected');
+        goCampture();
     })
 }
 
@@ -447,11 +449,20 @@ function tryIt2() {
     $('.last-word ').hide();
     $('.last-word1 ').show();
     if($('.sex-selected').attr('type') == 1 ){//男
-        var random = Math.ceil(Math.random() * manImgArr.length);
-        $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+        // var length1 = manImgArr.length;
+        var length1 = 12;
+
+        var random = Math.ceil(Math.random() * length1 );
+        var url = imgurl + random + '.png';
+        // $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+        $('.my-word img').attr('src',url);
     }else{
-        var random = Math.ceil(Math.random() * womanImgArr.length);
-        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+        // var length1 = womanImgArr.length;
+        var length2 = 12;
+        var random = Math.ceil(Math.random() * length2 );
+        var url = imgurl2 + random + '.png';
+        // $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+        $('.my-word img').attr('src',url);
     }
     $('.last-content').show();
 
@@ -502,7 +513,6 @@ function tryIt2() {
     });
 }
 
-
 function tryIt() {
     $('#uploadImg').attr('onchange','');
     var status = $('.up-pic').attr('status');
@@ -516,11 +526,20 @@ function tryIt() {
     $('.last-word ').hide();
     $('.last-word1 ').show();
     if($('.sex-selected').attr('type') == 1 ){//男
-        var random = Math.ceil(Math.random() * manImgArr.length);
-        $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+        // var length1 = manImgArr.length;
+        var length1 = 12;
+
+        var random = Math.ceil(Math.random() * length1 );
+        var url = imgurl + random + '.png';
+        // $('.my-word-info img').attr('src', manImgArr[random - 1].url).removeClass().addClass(manImgArr[random - 1].classname);
+        $('.my-word img').attr('src',url);
     }else{
-        var random = Math.ceil(Math.random() * womanImgArr.length);
-        $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+        // var length1 = womanImgArr.length;
+        var length2 = 12;
+        var random = Math.ceil(Math.random() * length2 );
+        var url = imgurl2 + random + '.png';
+        // $('.my-word-info img').attr('src', womanImgArr[random - 1].url).removeClass().addClass(womanImgArr[random - 1].classname);
+        $('.my-word img').attr('src',url);
     }
     $('.last-content').show();
 
