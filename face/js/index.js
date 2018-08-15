@@ -579,7 +579,7 @@ function tryIt() {
                 xhr.abort();    // 超时后中断请求
                 clearInterval(clearTime3);
                 $('.btn-start').attr('onclick','tryIt()');
-                alert("网络超时，请重新测试")
+                alert("网络超时，请重新测试");
             }
         }
     });
