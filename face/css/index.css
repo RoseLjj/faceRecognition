@@ -95,7 +95,17 @@ html,body{
 .valentine-title{
     position: relative;
     text-align: right;
-    padding-top: 7rem;
+    padding-top: 7.2rem;
+}
+
+.yanzhi{
+    position: absolute;
+    top:4rem;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    color:#fff;
+    font-family: KaiTi;
 }
 
 .cloud{
@@ -125,7 +135,7 @@ html,body{
 }
 
 .qixi{
-    width: 27rem;
+    width: 27.6rem;
 }
 
 /*指纹*/
@@ -244,7 +254,7 @@ html,body{
 
 }
 /*############  主题文本 end #########*/
-/*############  æ€§åˆ« start #########*/
+/*############  选择性别 start #########*/
 .sex-selection{
     padding-top: 6rem;
     display: none;
@@ -360,14 +370,15 @@ html,body{
 
 .upload-box .up-pic{
     position: absolute;
-    width: 15.4rem;
-    height: 15.4rem;
-    border-radius: 50%;
+    width: 13.6rem;
+    height: 18rem;
+    /*border-radius: 50%;*/
     top: 50%;
     left: 50%;
-    margin-left: -7.7rem;
-    margin-top: -7rem;
+    margin-left: -6.9rem;
+    margin-top: -9rem;
     z-index: 5;
+    border-radius: 0.8rem;
     display: none;
 }
 
