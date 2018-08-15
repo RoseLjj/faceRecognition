@@ -272,7 +272,7 @@ function share() {
     var options = {
         'id':"七夕爱情运势", //项目名
         'title':'你的好友被测出是百年一见的独孤星人，你也试试？',
-        'desc':'人工智能占卜你的七夕爱情运势，还不快来测测看',
+        'desc':'看颜值测运势，是好是坏就靠脸啦!',
         'link':"http://h5.flyfinger.com/2018/O/os/face/index.html",
         'imgUrl':"http://h5.flyfinger.com/2018/O/os/face/img/share.jpg",
         //        'type':'分享类型,music、video或link，不填默认为link',
@@ -302,7 +302,7 @@ function share() {
     //    });
     //如要在中途重置分享到朋友圈，调用setTimeLineOptions方法：
     _wx_share.setTimeLineOptions({
-        'title':"人工智能占卜你的七夕爱情运势，还不快来测测看"
+        'title':"你的好友被测出是百年一见的独孤星人，你也试试？"
     });
 }
 
