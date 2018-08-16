@@ -734,6 +734,12 @@ button.btn-zhan{
 
 .pic-tu>img{
     width: 24rem;
+    animation: brain 2s  linear infinite;
+}
+
+.reset-btn{
+    position: relative;
+    top:-1rem;
 }
 
 .reset-btn button{
@@ -742,6 +748,13 @@ button.btn-zhan{
 
 .reset-btn button img{
     width: 13rem;
+}
+
+.logo{
+    position: absolute;
+    bottom:2rem;
+    right: 1rem;
+    width: 5rem;
 }
 
 
