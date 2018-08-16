@@ -16,8 +16,8 @@ new function() {
 
 };
 
-var imgurl = 'http://h5.flyfinger.com/2018/O/os/face/img/boy/';
-var imgurl2 = 'http://h5.flyfinger.com/2018/O/os/face/img/girl/';
+var imgurl = 'http://s.flyfinger.com/picRepo/waibao/face/img/boy/';
+var imgurl2 = 'http://s.flyfinger.com/picRepo/waibao/face/img/girl/';
 var womanLength = 16; //男文案数量
 var manLength = 15; //女文案数量
 var manImgArr = [
@@ -273,8 +273,8 @@ function share() {
         'id':"七夕爱情运势", //项目名
         'title':'你的好友被测出是百年一见的独孤星人，你也试试？',
         'desc':'看颜值测运势，是好是坏就靠脸啦!',
-        'link':"http://h5.flyfinger.com/2018/O/os/face/index.html",
-        'imgUrl':"http://h5.flyfinger.com/2018/O/os/face/img/share.jpg",
+        'link':"http://s.flyfinger.com/picRepo/waibao/face/index.html",
+        'imgUrl':"http://s.flyfinger.com/picRepo/waibao/face/img/share.jpg",
         //        'type':'分享类型,music、video或link，不填默认为link',
         //        'dataUrl':' 如果type是music或video，则要提供数据链接，默认为空',
         //        'success':function(){
@@ -337,7 +337,7 @@ function loading() {
                 $('.content>div').hide();
                 $('.load-page').slideUp();
                 $('.finger-line').removeClass('finger-line2')
-                $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+                $('.finger-img').attr('src','http://s.flyfinger.com/picRepo/waibao/face/img/finger_01.png')
 
                 $('.content>div.valentine').show();
                 $('.content').slideDown();
@@ -356,7 +356,7 @@ function pressFinger(){
     $(".fingerpint").on({
         touchstart: function(e){
             $('.finger-line').addClass('finger-line2')
-            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_02.png')
+            $('.finger-img').attr('src','http://s.flyfinger.com/picRepo/waibao/face/img/finger_02.png')
             timeOutEvent = setTimeout(function(){
                 //此处为长按事件-----在此显示遮罩层及删除按钮
                 $('.content>div').slideUp();
@@ -371,7 +371,7 @@ function pressFinger(){
         touchend: function(e){
             clearTimeout(timeOutEvent);
             $('.finger-line').removeClass('finger-line2')
-            $('.finger-img').attr('src','http://h5.flyfinger.com/2018/O/os/face/img/finger_01.png')
+            $('.finger-img').attr('src','http://s.flyfinger.com/picRepo/waibao/face/img/finger_01.png')
             if(timeOutEvent!=0){//点击
                 console.log('点击');
 
@@ -569,8 +569,8 @@ function tryIt() {
                 flag = 1;
             }
         },
-        error:function (data) {
-            alert(data);
+        error:function (data,type,error) {
+            alert('无法识别,请重新上传照片!');
             flag = 3;
             scanOver(2);
         },
